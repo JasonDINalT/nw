@@ -1,18 +1,18 @@
 <article class="post static">
   <h1 class="title">
-    [registration]Регистрация[/registration]
-    [validation]Продолжение регистрации[/validation]
+    [registration]Р РµРіРёСЃС‚СЂР°С†РёСЏ[/registration]
+    [validation]РџСЂРѕРґРѕР»Р¶РµРЅРёРµ СЂРµРіРёСЃС‚СЂР°С†РёРё[/validation]
   </h1>
     [registration]
-      <b>Здравствуйте, уважаемый посетитель нашего сайта!</b><br />
-      Регистрация на нашем сайте позволит Вам быть его полноценным участником.
-      Вы сможете добавлять новости на сайт, оставлять свои комментарии, просматривать скрытый текст и многое другое.
-      <br />В случае возникновения проблем с регистрацией, обратитесь к <a href="/index.php?do=feedback">администратору</a> сайта.
+      <b>Р—РґСЂР°РІСЃС‚РІСѓР№С‚Рµ, СѓРІР°Р¶Р°РµРјС‹Р№ РїРѕСЃРµС‚РёС‚РµР»СЊ РЅР°С€РµРіРѕ СЃР°Р№С‚Р°!</b><br />
+      Р РµРіРёСЃС‚СЂР°С†РёСЏ РЅР° РЅР°С€РµРј СЃР°Р№С‚Рµ РїРѕР·РІРѕР»РёС‚ Р’Р°Рј Р±С‹С‚СЊ РµРіРѕ РїРѕР»РЅРѕС†РµРЅРЅС‹Рј СѓС‡Р°СЃС‚РЅРёРєРѕРј.
+      Р’С‹ СЃРјРѕР¶РµС‚Рµ РґРѕР±Р°РІР»СЏС‚СЊ РЅРѕРІРѕСЃС‚Рё РЅР° СЃР°Р№С‚, РѕСЃС‚Р°РІР»СЏС‚СЊ СЃРІРѕРё РєРѕРјРјРµРЅС‚Р°СЂРёРё, РїСЂРѕСЃРјР°С‚СЂРёРІР°С‚СЊ СЃРєСЂС‹С‚С‹Р№ С‚РµРєСЃС‚ Рё РјРЅРѕРіРѕРµ РґСЂСѓРіРѕРµ.
+      <br />Р’ СЃР»СѓС‡Р°Рµ РІРѕР·РЅРёРєРЅРѕРІРµРЅРёСЏ РїСЂРѕР±Р»РµРј СЃ СЂРµРіРёСЃС‚СЂР°С†РёРµР№, РѕР±СЂР°С‚РёС‚РµСЃСЊ Рє <a href="/index.php?do=feedback">Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂСѓ</a> СЃР°Р№С‚Р°.
     [/registration]
     [validation]
-      <b>Уважаемый посетитель,</b><br />
-      Ваш аккаунт был зарегистрирован на нашем сайте,
-      однако информация о Вас является неполной, поэтому заполните дополнительные поля в Вашем профиле.
+      <b>РЈРІР°Р¶Р°РµРјС‹Р№ РїРѕСЃРµС‚РёС‚РµР»СЊ,</b><br />
+      Р’Р°С€ Р°РєРєР°СѓРЅС‚ Р±С‹Р» Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅ РЅР° РЅР°С€РµРј СЃР°Р№С‚Рµ,
+      РѕРґРЅР°РєРѕ РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ Р’Р°СЃ СЏРІР»СЏРµС‚СЃСЏ РЅРµРїРѕР»РЅРѕР№, РїРѕСЌС‚РѕРјСѓ Р·Р°РїРѕР»РЅРёС‚Рµ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїРѕР»СЏ РІ Р’Р°С€РµРј РїСЂРѕС„РёР»Рµ.
     [/validation]
 </article>
 <div class="ux-form">
@@ -20,53 +20,53 @@
     [registration]
       <li>
         <div class="combofield">
-          <input placeholder="Логин" type="text" name="name" id="name" class="f_input f_wide">
-          <input class="bbcodes" title="Check" onclick="CheckLogin(); return false;" type="button" value="Проверить">
+          <input placeholder="Р›РѕРіРёРЅ" type="text" name="name" id="name" class="f_input f_wide">
+          <input class="bbcodes" title="Check" onclick="CheckLogin(); return false;" type="button" value="РџСЂРѕРІРµСЂРёС‚СЊ">
         </div>
         <div class="clr" id='result-registration'></div>
       </li>
       <li>
-        <input placeholder="Пароль" type="password" name="password1" id="password1" class="f_input f_wide">
+        <input placeholder="РџР°СЂРѕР»СЊ" type="password" name="password1" id="password1" class="f_input f_wide">
       </li>
       <li>
-        <input placeholder="Повторите пароль" type="password" name="password2" id="password2" class="f_input f_wide">
+        <input placeholder="РџРѕРІС‚РѕСЂРёС‚Рµ РїР°СЂРѕР»СЊ" type="password" name="password2" id="password2" class="f_input f_wide">
       </li>
       <li>
         <input placeholder="E-mail" type="email" name="email" id="email" class="f_input f_wide">
       </li>
       [question]
       <li>
-        Вопрос: <b>{question}</b>
-        <div><input placeholder="Ответ" type="text" name="question_answer" id="question_answer" class="f_input f_wide" ></div>
+        Р’РѕРїСЂРѕСЃ: <b>{question}</b>
+        <div><input placeholder="РћС‚РІРµС‚" type="text" name="question_answer" id="question_answer" class="f_input f_wide" ></div>
       </li>
       [/question]
       [sec_code]
       <li>
         <div class="c-captcha-box">
-          <label for="sec_code">Повторите код:</label>
+          <label for="sec_code">РџРѕРІС‚РѕСЂРёС‚Рµ РєРѕРґ:</label>
           <div class="c-captcha">
             {reg_code}
-            <input title="Введите код указанный на картинке" type="text" name="sec_code" id="sec_code" class="f_input" >
+            <input title="Р’РІРµРґРёС‚Рµ РєРѕРґ СѓРєР°Р·Р°РЅРЅС‹Р№ РЅР° РєР°СЂС‚РёРЅРєРµ" type="text" name="sec_code" id="sec_code" class="f_input" >
           </div>
         </div>
       </li>
       [/sec_code]
       [recaptcha]
       <li>
-        <div>Введите слова</div>
+        <div>Р’РІРµРґРёС‚Рµ СЃР»РѕРІР°</div>
         {recaptcha}
       </li>
       [/recaptcha]
       [/registration]
       [validation]
-      <li><input placeholder="Ваше имя" type="text" id="fullname" name="fullname" class="f_input f_wide"></li>
-      <li><input placeholder="Местонахождение" type="text" id="land" name="land" class="f_input f_wide"></li>
+      <li><input placeholder="Р’Р°С€Рµ РёРјСЏ" type="text" id="fullname" name="fullname" class="f_input f_wide"></li>
+      <li><input placeholder="РњРµСЃС‚РѕРЅР°С…РѕР¶РґРµРЅРёРµ" type="text" id="land" name="land" class="f_input f_wide"></li>
       <li><input placeholder="ICQ" type="text" id="icq" name="icq" class="f_input f_wide"></li>
-      <li><textarea placeholder="О себе" id="info" name="info" rows="3" class="f_textarea f_wide"></textarea></li>
-      <li><label for="image">Аватар:</label><input type="file" id="image" name="image" class="f_input f_wide"></li>
+      <li><textarea placeholder="Рћ СЃРµР±Рµ" id="info" name="info" rows="3" class="f_textarea f_wide"></textarea></li>
+      <li><label for="image">РђРІР°С‚Р°СЂ:</label><input type="file" id="image" name="image" class="f_input f_wide"></li>
       [/validation]
   </ul>
   <div class="submitline">
-    <button name="submit" class="btn f_wide" type="submit">Зарегистрироваться</button>
+    <button name="submit" class="btn f_wide" type="submit">Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°С‚СЊСЃСЏ</button>
   </div>
 </div>

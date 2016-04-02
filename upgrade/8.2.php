@@ -24,7 +24,7 @@ $tableSchema[] = "CREATE TABLE " . PREFIX . "_subscribe (
 ) ENGINE=MyISAM /*!40101 DEFAULT CHARACTER SET " . COLLATE . " COLLATE " . COLLATE . "_general_ci */";
 
 
-$tableSchema[] = "UPDATE " . PREFIX . "_email set template='Уважаемый {%username_to%},\r\n\r\nуведомляем вас о том, что на сайт  {$config['http_home_url']} был добавлен комментарий к новости, на которую вы были подписаны.\r\n\r\n------------------------------------------------\r\nКраткая информация о комментарии\r\n------------------------------------------------\r\n\r\nАвтор: {%username%}\r\nДата добавления: {%date%}\r\nСсылка на новость: {%link%}\r\n\r\n------------------------------------------------\r\nТекст комментария\r\n------------------------------------------------\r\n\r\n{%text%}\r\n\r\n------------------------------------------------\r\n\r\nЕсли вы не хотите больше получать уведомлений о новых комментариях к данной новости, то проследуйте по данной ссылке: {%unsubscribe%}\r\n\r\nС уважением,\r\n\r\nАдминистрация {$config['http_home_url']}' WHERE name='comments'";
+$tableSchema[] = "UPDATE " . PREFIX . "_email set template='РЈРІР°Р¶Р°РµРјС‹Р№ {%username_to%},\r\n\r\nСѓРІРµРґРѕРјР»СЏРµРј РІР°СЃ Рѕ С‚РѕРј, С‡С‚Рѕ РЅР° СЃР°Р№С‚  {$config['http_home_url']} Р±С‹Р» РґРѕР±Р°РІР»РµРЅ РєРѕРјРјРµРЅС‚Р°СЂРёР№ Рє РЅРѕРІРѕСЃС‚Рё, РЅР° РєРѕС‚РѕСЂСѓСЋ РІС‹ Р±С‹Р»Рё РїРѕРґРїРёСЃР°РЅС‹.\r\n\r\n------------------------------------------------\r\nРљСЂР°С‚РєР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ РєРѕРјРјРµРЅС‚Р°СЂРёРё\r\n------------------------------------------------\r\n\r\nРђРІС‚РѕСЂ: {%username%}\r\nР”Р°С‚Р° РґРѕР±Р°РІР»РµРЅРёСЏ: {%date%}\r\nРЎСЃС‹Р»РєР° РЅР° РЅРѕРІРѕСЃС‚СЊ: {%link%}\r\n\r\n------------------------------------------------\r\nРўРµРєСЃС‚ РєРѕРјРјРµРЅС‚Р°СЂРёСЏ\r\n------------------------------------------------\r\n\r\n{%text%}\r\n\r\n------------------------------------------------\r\n\r\nР•СЃР»Рё РІС‹ РЅРµ С…РѕС‚РёС‚Рµ Р±РѕР»СЊС€Рµ РїРѕР»СѓС‡Р°С‚СЊ СѓРІРµРґРѕРјР»РµРЅРёР№ Рѕ РЅРѕРІС‹С… РєРѕРјРјРµРЅС‚Р°СЂРёСЏС… Рє РґР°РЅРЅРѕР№ РЅРѕРІРѕСЃС‚Рё, С‚Рѕ РїСЂРѕСЃР»РµРґСѓР№С‚Рµ РїРѕ РґР°РЅРЅРѕР№ СЃСЃС‹Р»РєРµ: {%unsubscribe%}\r\n\r\nРЎ СѓРІР°Р¶РµРЅРёРµРј,\r\n\r\nРђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ {$config['http_home_url']}' WHERE name='comments'";
 $tableSchema[] = "ALTER TABLE `" . PREFIX . "_usergroups` CHANGE `max_foto` `max_foto` VARCHAR( 10 ) NOT NULL DEFAULT ''";
 $tableSchema[] = "ALTER TABLE `" . PREFIX . "_usergroups` ADD `allow_html` TINYINT( 1 ) NOT NULL DEFAULT '1'";
 $tableSchema[] = "ALTER TABLE `" . PREFIX . "_usergroups` ADD `group_prefix` TEXT NOT NULL";
@@ -40,7 +40,7 @@ foreach($tableSchema as $table) {
 }
 
 
-$handler = fopen(ENGINE_DIR.'/data/config.php', "w") or die("Извините, но невозможно записать информацию в файл <b>.engine/data/config.php</b>.<br />Проверьте правильность проставленного CHMOD!");
+$handler = fopen(ENGINE_DIR.'/data/config.php', "w") or die("РР·РІРёРЅРёС‚Рµ, РЅРѕ РЅРµРІРѕР·РјРѕР¶РЅРѕ Р·Р°РїРёСЃР°С‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ РІ С„Р°Р№Р» <b>.engine/data/config.php</b>.<br />РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РїСЂРѕСЃС‚Р°РІР»РµРЅРЅРѕРіРѕ CHMOD!");
 fwrite($handler, "<?PHP \n\n//System Configurations\n\n\$config = array (\n\n");
 foreach($config as $name => $value)
 {
@@ -86,7 +86,7 @@ $video_config = <<<HTML
 ?>
 HTML;
 
-$con_file = fopen(ENGINE_DIR.'/data/videoconfig.php', "w+") or die("Извините, но невозможно создать файл <b>.engine/data/videoconfig.php</b>.<br />Проверьте правильность проставленного CHMOD!");
+$con_file = fopen(ENGINE_DIR.'/data/videoconfig.php', "w+") or die("РР·РІРёРЅРёС‚Рµ, РЅРѕ РЅРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р» <b>.engine/data/videoconfig.php</b>.<br />РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РїСЂРѕСЃС‚Р°РІР»РµРЅРЅРѕРіРѕ CHMOD!");
 fwrite($con_file, $video_config);
 fclose($con_file);
 @chmod("engine/data/videoconfig.php", 0666);
@@ -103,7 +103,7 @@ while ( $file = readdir( $fdir ) ) {
 
 clear_cache();
 
-if ($db->error_count) $error_info = "Всего запланировано запросов: <b>".$db->query_num."</b> Неудалось выполнить запросов: <b>".$db->error_count."</b>. Возможно они уже выполнены ранее."; else $error_info = "";
+if ($db->error_count) $error_info = "Р’СЃРµРіРѕ Р·Р°РїР»Р°РЅРёСЂРѕРІР°РЅРѕ Р·Р°РїСЂРѕСЃРѕРІ: <b>".$db->query_num."</b> РќРµСѓРґР°Р»РѕСЃСЊ РІС‹РїРѕР»РЅРёС‚СЊ Р·Р°РїСЂРѕСЃРѕРІ: <b>".$db->error_count."</b>. Р’РѕР·РјРѕР¶РЅРѕ РѕРЅРё СѓР¶Рµ РІС‹РїРѕР»РЅРµРЅС‹ СЂР°РЅРµРµ."; else $error_info = "";
 
-msgbox("info","Информация", "Обновление базы данных с версии <b>8.2</b> до версии <b>8.3</b> успешно завершено.<br />{$error_info}<br />Нажмите далее для продолжения процессa обновления скрипта.");
+msgbox("info","РРЅС„РѕСЂРјР°С†РёСЏ", "РћР±РЅРѕРІР»РµРЅРёРµ Р±Р°Р·С‹ РґР°РЅРЅС‹С… СЃ РІРµСЂСЃРёРё <b>8.2</b> РґРѕ РІРµСЂСЃРёРё <b>8.3</b> СѓСЃРїРµС€РЅРѕ Р·Р°РІРµСЂС€РµРЅРѕ.<br />{$error_info}<br />РќР°Р¶РјРёС‚Рµ РґР°Р»РµРµ РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ РїСЂРѕС†РµСЃСЃa РѕР±РЅРѕРІР»РµРЅРёСЏ СЃРєСЂРёРїС‚Р°.");
 ?>

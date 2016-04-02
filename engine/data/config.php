@@ -10,13 +10,13 @@ $config = array (
 
 'http_home_url' => "http://nw/",
 
-'charset' => "windows-1251",
+'charset' => "utf-8",
 
 'admin_mail' => "admin@admin.admin",
 
-'description' => "Демонстрационная страница движка DataLife Engine",
+'description' => "Р”РµРјРѕРЅСЃС‚СЂР°С†РёРѕРЅРЅР°СЏ СЃС‚СЂР°РЅРёС†Р° РґРІРёР¶РєР° DataLife Engine",
 
-'keywords' => "DataLife, Engine, CMS, PHP движок",
+'keywords' => "DataLife, Engine, CMS, PHP РґРІРёР¶РѕРє",
 
 'date_adjust' => "Europe/Moscow",
 
@@ -26,7 +26,7 @@ $config = array (
 
 'langs' => "Russian",
 
-'skin' => 'GhostAnime',
+'skin' => "Gemini",
 
 'allow_gzip' => "0",
 
@@ -160,7 +160,7 @@ $config = array (
 
 'allow_multi_category' => "1",
 
-'short_title' => "Демонстрационный сайт",
+'short_title' => "Р”РµРјРѕРЅСЃС‚СЂР°С†РёРѕРЅРЅС‹Р№ СЃР°Р№С‚",
 
 'allow_rss' => "1",
 
@@ -172,7 +172,7 @@ $config = array (
 
 'comments_maxlen' => "3000",
 
-'offline_reason' => "Сайт находится на текущей реконструкции, после завершения всех работ сайт будет открыт.<br /><br />Приносим вам свои извинения за доставленные неудобства.",
+'offline_reason' => "РЎР°Р№С‚ РЅР°С…РѕРґРёС‚СЃСЏ РЅР° С‚РµРєСѓС‰РµР№ СЂРµРєРѕРЅСЃС‚СЂСѓРєС†РёРё, РїРѕСЃР»Рµ Р·Р°РІРµСЂС€РµРЅРёСЏ РІСЃРµС… СЂР°Р±РѕС‚ СЃР°Р№С‚ Р±СѓРґРµС‚ РѕС‚РєСЂС‹С‚.<br /><br />РџСЂРёРЅРѕСЃРёРј РІР°Рј СЃРІРѕРё РёР·РІРёРЅРµРЅРёСЏ Р·Р° РґРѕСЃС‚Р°РІР»РµРЅРЅС‹Рµ РЅРµСѓРґРѕР±СЃС‚РІР°.",
 
 'catalog_sort' => "date",
 

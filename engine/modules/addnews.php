@@ -7,11 +7,11 @@
 -----------------------------------------------------
  Copyright (c) 2004,2015 SoftNews Media Group
 =====================================================
- Äàííûé êîä çàùèùåí àâòîðñêèìè ïðàâàìè
+ Ð”Ð°Ð½Ð½Ñ‹Ð¹ ÐºÐ¾Ð´ Ð·Ð°Ñ‰Ð¸Ñ‰ÐµÐ½ Ð°Ð²Ñ‚Ð¾Ñ€ÑÐºÐ¸Ð¼Ð¸ Ð¿Ñ€Ð°Ð²Ð°Ð¼Ð¸
 =====================================================
- Ôàéë: addnews.php
+ Ð¤Ð°Ð¹Ð»: addnews.php
 -----------------------------------------------------
- Íàçíà÷åíèå: Äîáàâëåíèå íîâîñòè ïîñåòèòåëåì
+ ÐÐ°Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: Ð”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð½Ð¾Ð²Ð¾ÑÑ‚Ð¸ Ð¿Ð¾ÑÐµÑ‚Ð¸Ñ‚ÐµÐ»ÐµÐ¼
 =====================================================
 */
 
@@ -119,7 +119,7 @@ if( ! $allow_addnews ) {
 	
 		}
 
-		// îáðàáîòêà îïðîñà
+		// Ð¾Ð±Ñ€Ð°Ð±Ð¾Ñ‚ÐºÐ° Ð¾Ð¿Ñ€Ð¾ÑÐ°
 		if( trim( $_POST['vote_title'] != "" ) ) {
 			
 			$add_vote = 1;
@@ -325,7 +325,7 @@ if( ! $allow_addnews ) {
 				$db->query( "UPDATE " . PREFIX . "_post set title='$title', short_story='$short_story', full_story='$full_story', xfields='$filecontents', category='$category_list', alt_name='$alt_name', allow_comm='$allow_comm', approve='$approve', allow_main='$allow_main', fixed='$news_fixed', allow_br='$allow_br', tags='" . $_POST['tags'] . "' WHERE id='$id'" );
 				$db->query( "UPDATE " . PREFIX . "_post_extras SET allow_rate='{$allow_rating}', votes='{$add_vote}' WHERE news_id='{$id}'" );				
 
-				// Îáëàêî òåãîâ
+				// ÐžÐ±Ð»Ð°ÐºÐ¾ Ñ‚ÐµÐ³Ð¾Ð²
 				if( $_POST['tags'] != $row['tags'] or $approve ) {
 					$db->query( "DELETE FROM " . PREFIX . "_tags WHERE news_id = '{$row['id']}'" );
 					

@@ -7,11 +7,11 @@ http://dle-news.ru/
 -----------------------------------------------------
 Copyright (c) 2004,2015 SoftNews Media Group
 =====================================================
-Äàííûé êîä çàùèùåí àâòîðñêèìè ïðàâàìè
+Ð”Ð°Ð½Ð½Ñ‹Ð¹ ÐºÐ¾Ð´ Ð·Ð°Ñ‰Ð¸Ñ‰ÐµÐ½ Ð°Ð²Ñ‚Ð¾Ñ€ÑÐºÐ¸Ð¼Ð¸ Ð¿Ñ€Ð°Ð²Ð°Ð¼Ð¸
 =====================================================
-Ôàéë: banners.php
+Ð¤Ð°Ð¹Ð»: banners.php
 -----------------------------------------------------
-Íàçíà÷åíèå: Âûâîä áàííåðîâ
+ÐÐ°Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: Ð’Ñ‹Ð²Ð¾Ð´ Ð±Ð°Ð½Ð½ÐµÑ€Ð¾Ð²
 =====================================================
 */
 
@@ -21,7 +21,7 @@ if( ! defined( 'DATALIFEENGINE' ) ) {
 
 define( 'BANNERS', 1 );
 
-//################# Îïðåäåëåíèå áàííåðîâ
+//################# ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»ÐµÐ½Ð¸Ðµ Ð±Ð°Ð½Ð½ÐµÑ€Ð¾Ð²
 $banners = get_vars( "banners" );
 
 if( ! is_array( $banners ) ) {
@@ -47,7 +47,7 @@ $banner_in_news = array ();
 
 if( count( $banners ) > 0 ) {
 	foreach ( $banners as $name => $value ) {
-		if( $value['approve'] ) { //åñëè àêòèâíûé
+		if( $value['approve'] ) { //ÐµÑÐ»Ð¸ Ð°ÐºÑ‚Ð¸Ð²Ð½Ñ‹Ð¹
 			
 
 			if( $value['category'] ) {
@@ -70,38 +70,38 @@ if( count( $banners ) > 0 ) {
 				$value['code'] = "";
 			}
 			
-			if( $value['code'] != "" ) //åñëè íå ïîðåçàëè ïî îãðàíè÷åíèÿì
+			if( $value['code'] != "" ) //ÐµÑÐ»Ð¸ Ð½Ðµ Ð¿Ð¾Ñ€ÐµÐ·Ð°Ð»Ð¸ Ð¿Ð¾ Ð¾Ð³Ñ€Ð°Ð½Ð¸Ñ‡ÐµÐ½Ð¸ÑÐ¼
 			{
-				switch ($value['short_place']) //âûáèðàåì ðàñïîëîæåíèå áàííåðà
+				switch ($value['short_place']) //Ð²Ñ‹Ð±Ð¸Ñ€Ð°ÐµÐ¼ Ñ€Ð°ÑÐ¿Ð¾Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ Ð±Ð°Ð½Ð½ÐµÑ€Ð°
 				{
-					case 1 : //ââåðõ
+					case 1 : //Ð²Ð²ÐµÑ€Ñ…
 						$ban_short['top'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
 						break;
 					
-					case 2 : //öåíòð
+					case 2 : //Ñ†ÐµÐ½Ñ‚Ñ€
 						$ban_short['cen'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
 						break;
 					
-					case 3 : //íèç
+					case 3 : //Ð½Ð¸Ð·
 						$ban_short['down'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
 						break;
 					
-					case 4 : //ââåðõ,íèç
+					case 4 : //Ð²Ð²ÐµÑ€Ñ…,Ð½Ð¸Ð·
 						$ban_short['top'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
 						$ban_short['down'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
 						break;
 					
-					case 5 : //öåíòð,íèç
+					case 5 : //Ñ†ÐµÐ½Ñ‚Ñ€,Ð½Ð¸Ð·
 						$ban_short['cen'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
 						$ban_short['down'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
 						break;
 					
-					case 6 : //Ââåðõ,öåíòð
+					case 6 : //Ð’Ð²ÐµÑ€Ñ…,Ñ†ÐµÐ½Ñ‚Ñ€
 						$ban_short['cen'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
 						$ban_short['top'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
 						break;
 					
-					case 7 : //ââåðõ,öåíòð,íèç
+					case 7 : //Ð²Ð²ÐµÑ€Ñ…,Ñ†ÐµÐ½Ñ‚Ñ€,Ð½Ð¸Ð·
 						$ban_short['cen'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
 						$ban_short['top'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
 						$ban_short['down'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );

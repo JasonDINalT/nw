@@ -7,11 +7,11 @@
 -----------------------------------------------------
  Copyright (c) 2004,2015
 =====================================================
- Данный код защищен авторскими правами
+ Р”Р°РЅРЅС‹Р№ РєРѕРґ Р·Р°С‰РёС‰РµРЅ Р°РІС‚РѕСЂСЃРєРёРјРё РїСЂР°РІР°РјРё
 =====================================================
- Файл: dumper.php
+ Р¤Р°Р№Р»: dumper.php
 -----------------------------------------------------
- Назначение: создание бекапа БД
+ РќР°Р·РЅР°С‡РµРЅРёРµ: СЃРѕР·РґР°РЅРёРµ Р±РµРєР°РїР° Р‘Р”
 =====================================================
 */
 
@@ -37,18 +37,18 @@ define('DBNAMES', DBNAME);
 define('DBNUSER', DBUSER);
 define('DBPREFIX',PREFIX);
 
-// Кодировка соединения с MySQL
-// auto - автоматический выбор (устанавливается кодировка таблицы), cp1251 - windows-1251, и т.п.
+// РљРѕРґРёСЂРѕРІРєР° СЃРѕРµРґРёРЅРµРЅРёСЏ СЃ MySQL
+// auto - Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРёР№ РІС‹Р±РѕСЂ (СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃСЏ РєРѕРґРёСЂРѕРІРєР° С‚Р°Р±Р»РёС†С‹), cp1251 - windows-1251, Рё С‚.Рї.
 define('CHARSET', 'auto');
 
-// Кодировка соединения с MySQL при восстановлении
-// На случай переноса со старых версий MySQL (до 4.1), у которых не указана кодировка таблиц в дампе
-// При добавлении 'forced->', к примеру 'forced->cp1251', кодировка таблиц при восстановлении будет принудительно заменена на cp1251
-// Можно также указывать сравнение нужное к примеру 'cp1251_ukrainian_ci' или 'forced->cp1251_ukrainian_ci'
+// РљРѕРґРёСЂРѕРІРєР° СЃРѕРµРґРёРЅРµРЅРёСЏ СЃ MySQL РїСЂРё РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРё
+// РќР° СЃР»СѓС‡Р°Р№ РїРµСЂРµРЅРѕСЃР° СЃРѕ СЃС‚Р°СЂС‹С… РІРµСЂСЃРёР№ MySQL (РґРѕ 4.1), Сѓ РєРѕС‚РѕСЂС‹С… РЅРµ СѓРєР°Р·Р°РЅР° РєРѕРґРёСЂРѕРІРєР° С‚Р°Р±Р»РёС† РІ РґР°РјРїРµ
+// РџСЂРё РґРѕР±Р°РІР»РµРЅРёРё 'forced->', Рє РїСЂРёРјРµСЂСѓ 'forced->cp1251', РєРѕРґРёСЂРѕРІРєР° С‚Р°Р±Р»РёС† РїСЂРё РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРё Р±СѓРґРµС‚ РїСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕ Р·Р°РјРµРЅРµРЅР° РЅР° cp1251
+// РњРѕР¶РЅРѕ С‚Р°РєР¶Рµ СѓРєР°Р·С‹РІР°С‚СЊ СЃСЂР°РІРЅРµРЅРёРµ РЅСѓР¶РЅРѕРµ Рє РїСЂРёРјРµСЂСѓ 'cp1251_ukrainian_ci' РёР»Рё 'forced->cp1251_ukrainian_ci'
 define('RESTORE_CHARSET', 'cp1251');
 
 define('SC', 0);
-// Типы таблиц у которых сохраняется только структура, разделенные запятой
+// РўРёРїС‹ С‚Р°Р±Р»РёС† Сѓ РєРѕС‚РѕСЂС‹С… СЃРѕС…СЂР°РЅСЏРµС‚СЃСЏ С‚РѕР»СЊРєРѕ СЃС‚СЂСѓРєС‚СѓСЂР°, СЂР°Р·РґРµР»РµРЅРЅС‹Рµ Р·Р°РїСЏС‚РѕР№
 define('ONLY_CREATE', 'MRG_MyISAM,MERGE,HEAP,MEMORY');
 
 $is_safe_mode = ini_get('safe_mode') == '1' ? 1 : 0;
@@ -119,7 +119,7 @@ class dumper {
 		$this->size = 0;
 		$this->comp = 0;
 
-		// Версия MySQL вида 40101
+		// Р’РµСЂСЃРёСЏ MySQL РІРёРґР° 40101
 		preg_match("/^(\d+)\.(\d+)\.(\d+)/", mysqli_get_server_info($dblink), $m);
 		$this->mysql_version = sprintf("%d%02d%02d", $m[1], $m[2], $m[3]);
 
@@ -196,7 +196,7 @@ class dumper {
         }
 
 		$tabs = count($tables);
-		// Определение размеров таблиц
+		// РћРїСЂРµРґРµР»РµРЅРёРµ СЂР°Р·РјРµСЂРѕРІ С‚Р°Р±Р»РёС†
 		$result = mysqli_query($dblink, "SHOW TABLE STATUS");
 		$tabinfo = array();
 		$tab_charset = array();
@@ -247,7 +247,7 @@ class dumper {
 		$t=0;
 		echo tpl_l(str_repeat("-", 60));
 		$result = mysqli_query($dblink, "SET SQL_QUOTE_SHOW_CREATE = 1");
-		// Кодировка соединения по умолчанию
+		// РљРѕРґРёСЂРѕРІРєР° СЃРѕРµРґРёРЅРµРЅРёСЏ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 		if ($this->mysql_version > 40101 && CHARSET != 'auto') {
 			mysqli_query($dblink, "SET NAMES '" . CHARSET . "'") or trigger_error ($lang['dumper_6'] . mysqli_error($dblink), E_USER_ERROR);
 			$last_charset = CHARSET;
@@ -256,7 +256,7 @@ class dumper {
 			$last_charset = '';
 		}
         foreach ($tables AS $table){
-			// Выставляем кодировку соединения соответствующую кодировке таблицы
+			// Р’С‹СЃС‚Р°РІР»СЏРµРј РєРѕРґРёСЂРѕРІРєСѓ СЃРѕРµРґРёРЅРµРЅРёСЏ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰СѓСЋ РєРѕРґРёСЂРѕРІРєРµ С‚Р°Р±Р»РёС†С‹
 			if ($this->mysql_version > 40101 && $tab_charset[$table] != $last_charset && $tab_charset[$table] ) {
 				if ( CHARSET == 'auto') {
 					mysqli_query($dblink, "SET NAMES '" . $tab_charset[$table] . "'") or trigger_error ($lang['dumper_6'] . mysqli_error($dblink), E_USER_ERROR);
@@ -269,16 +269,16 @@ class dumper {
 				}
 			}
 			echo tpl_l("{$lang['dumper_11']} `{$table}` [" . fn_int($tabinfo[$table]) . "].");
-        	// Создание таблицы
+        	// РЎРѕР·РґР°РЅРёРµ С‚Р°Р±Р»РёС†С‹
 			$result = mysqli_query($dblink, "SHOW CREATE TABLE `{$table}`");
         	$tab = mysqli_fetch_array($result);
 			$tab = preg_replace('/(default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP|DEFAULT CHARSET=\w+|COLLATE=\w+|character set \w+|collate \w+)/i', '/*!40101 \\1 */', $tab);
         	$this->fn_write($fp, "DROP TABLE IF EXISTS `{$table}`;\n{$tab[1]};\n\n");
-        	// Проверяем нужно ли дампить данные
+        	// РџСЂРѕРІРµСЂСЏРµРј РЅСѓР¶РЅРѕ Р»Рё РґР°РјРїРёС‚СЊ РґР°РЅРЅС‹Рµ
         	if (in_array($tab_type[$table], $this->only_create)) {
 				continue;
 			}
-        	// Опредеделяем типы столбцов
+        	// РћРїСЂРµРґРµРґРµР»СЏРµРј С‚РёРїС‹ СЃС‚РѕР»Р±С†РѕРІ
             $NumericColumn = array();
             $result = mysqli_query($dblink, "SHOW COLUMNS FROM `{$table}`");
             $field = 0;
@@ -369,7 +369,7 @@ class dumper {
 		echo tpl_l("{$lang['dumper_20']} `{$db}`.");
 
 
-		// Определение формата файла
+		// РћРїСЂРµРґРµР»РµРЅРёРµ С„РѕСЂРјР°С‚Р° С„Р°Р№Р»Р°
 		if(preg_match("/^(.+?)\.sql(\.(bz2|gz))?$/", $file, $matches)) {
 			if (isset($matches[3]) && $matches[3] == 'bz2') {
 			    $this->SET['comp_method'] = 2;
@@ -403,8 +403,8 @@ class dumper {
 		$info = array();
 		$convert=false;
 
-		// Установка кодировки соединения
-		if ($this->mysql_version > 40101 && (CHARSET != 'auto' || $this->forced_charset)) { // Кодировка по умолчанию, если в дампе не указана кодировка
+		// РЈСЃС‚Р°РЅРѕРІРєР° РєРѕРґРёСЂРѕРІРєРё СЃРѕРµРґРёРЅРµРЅРёСЏ
+		if ($this->mysql_version > 40101 && (CHARSET != 'auto' || $this->forced_charset)) { // РљРѕРґРёСЂРѕРІРєР° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ, РµСЃР»Рё РІ РґР°РјРїРµ РЅРµ СѓРєР°Р·Р°РЅР° РєРѕРґРёСЂРѕРІРєР°
 			mysqli_query("SET NAMES '" . $this->restore_charset . "'") or trigger_error ($lang['dumper_6'] . mysqli_error($dblink), E_USER_ERROR);
 			echo tpl_l("{$lang['dumper_7']} `" . $this->restore_charset . "`.", C_WARNING);
 			$last_charset = $this->restore_charset;
@@ -434,7 +434,7 @@ class dumper {
 				if ($table != $m[2]) {
 				    $table = $m[2];
 					$tabs++;
-					$cache .= tpl_l("Таблица `{$table}`.");
+					$cache .= tpl_l("РўР°Р±Р»РёС†Р° `{$table}`.");
 					$last_showed = $table;
 					$i = 0;
 					if ($is_skd)
@@ -478,7 +478,7 @@ class dumper {
 				    		$sql = preg_replace("/ENGINE\s?=/", "TYPE=", $sql);
 						}
 						elseif (preg_match("/CREATE TABLE/i", $sql)){
-							// Выставляем кодировку соединения
+							// Р’С‹СЃС‚Р°РІР»СЏРµРј РєРѕРґРёСЂРѕРІРєСѓ СЃРѕРµРґРёРЅРµРЅРёСЏ
 							if (preg_match("/(CHARACTER SET|CHARSET)[=\s]+(\w+)/i", $sql, $charset)) {
 								if (!$this->forced_charset && $charset[2] != $last_charset) {
 									if (CHARSET == 'auto') {
@@ -494,13 +494,13 @@ class dumper {
 										$cache .= tpl_l($lang['dumper_9'].' `'. $table .'` -> ' . $charset[2] . ' ('.$lang['dumper_10'].' '  . $this->restore_charset . ')', C_ERROR);
 									}
 								}
-								// Меняем кодировку если указано форсировать кодировку
+								// РњРµРЅСЏРµРј РєРѕРґРёСЂРѕРІРєСѓ РµСЃР»Рё СѓРєР°Р·Р°РЅРѕ С„РѕСЂСЃРёСЂРѕРІР°С‚СЊ РєРѕРґРёСЂРѕРІРєСѓ
 								if ($this->forced_charset OR $convert) {
 									$sql = preg_replace("/(\/\*!\d+\s)?((COLLATE)[=\s]+)\w+(\s+\*\/)?/i", '', $sql);
 									$sql = preg_replace("/((CHARACTER SET|CHARSET)[=\s]+)\w+/i", "\\1" . $this->restore_charset . $this->restore_collate, $sql);
 								}
 							}
-							elseif(CHARSET == 'auto'){ // Вставляем кодировку для таблиц, если она не указана и установлена auto кодировка
+							elseif(CHARSET == 'auto'){ // Р’СЃС‚Р°РІР»СЏРµРј РєРѕРґРёСЂРѕРІРєСѓ РґР»СЏ С‚Р°Р±Р»РёС†, РµСЃР»Рё РѕРЅР° РЅРµ СѓРєР°Р·Р°РЅР° Рё СѓСЃС‚Р°РЅРѕРІР»РµРЅР° auto РєРѕРґРёСЂРѕРІРєР°
 								$sql .= ' DEFAULT CHARSET=' . $this->restore_charset . $this->restore_collate;
 								if ($this->restore_charset != $last_charset) {
 									mysqli_query($dblink, "SET NAMES '" . $this->restore_charset . "'") or trigger_error ("{$lang['dumper_6']}{$sql}<BR>" . mysqli_error($dblink), E_USER_ERROR);
@@ -511,7 +511,7 @@ class dumper {
 						}
 						if ($last_showed != $table) {$cache .= tpl_l("{$lang['dumper_9']} `{$table}`."); $last_showed = $table;}
 					}
-					elseif($this->mysql_version > 40101 && empty($last_charset)) { // Устанавливаем кодировку на случай если отсутствует CREATE TABLE
+					elseif($this->mysql_version > 40101 && empty($last_charset)) { // РЈСЃС‚Р°РЅР°РІР»РёРІР°РµРј РєРѕРґРёСЂРѕРІРєСѓ РЅР° СЃР»СѓС‡Р°Р№ РµСЃР»Рё РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚ CREATE TABLE
 						mysqli_query($dblink, "SET $this->restore_charset '" . $this->restore_charset . "'") or trigger_error ("{$lang['dumper_6']}{$sql}<BR>" . mysqli_error($dblink), E_USER_ERROR);
 						echo tpl_l("{$lang['dumper_7']} `" . $this->restore_charset . "`.", C_WARNING);
 						$last_charset = $this->restore_charset;
@@ -696,7 +696,7 @@ function fn_int($num){
 	return number_format($num, 0, ',', ' ');
 }
 
-// Шаблоны
+// РЁР°Р±Р»РѕРЅС‹
 
 function tpl_page($content = '', $buttons = ''){
 	global $config;

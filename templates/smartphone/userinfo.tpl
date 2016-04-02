@@ -1,15 +1,15 @@
 <article class="post static">
-  <h1 class="title">Пользователь: {usertitle}</h1>
-  Полное имя: {fullname}<br />
-  Дата регистрации: {registration}<br />
-  Последнее посещение: {lastdate}<br />
-  Группа: <font color="red">{status}</font>[time_limit] в группе до: {time_limit}[/time_limit]<br /><br />
-  Место жительства: {land}<br />
-  Номер ICQ: {icq}<br />
-  Немного о себе:<br />{info}<br /><br />
-  Количество публикаций: {news-num}<br />
+  <h1 class="title">РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ: {usertitle}</h1>
+  РџРѕР»РЅРѕРµ РёРјСЏ: {fullname}<br />
+  Р”Р°С‚Р° СЂРµРіРёСЃС‚СЂР°С†РёРё: {registration}<br />
+  РџРѕСЃР»РµРґРЅРµРµ РїРѕСЃРµС‰РµРЅРёРµ: {lastdate}<br />
+  Р“СЂСѓРїРїР°:В <font color="red">{status}</font>[time_limit] РІ РіСЂСѓРїРїРµ РґРѕ: {time_limit}[/time_limit]<br /><br />
+  РњРµСЃС‚Рѕ Р¶РёС‚РµР»СЊСЃС‚РІР°: {land}<br />
+  РќРѕРјРµСЂ ICQ: {icq}<br />
+  РќРµРјРЅРѕРіРѕ Рѕ СЃРµР±Рµ:<br />{info}<br /><br />
+  РљРѕР»РёС‡РµСЃС‚РІРѕ РїСѓР±Р»РёРєР°С†РёР№: {news-num}<br />
   [ {news} ]<br /><br />
-  Количество комментариев: {comm-num}<br />
+  РљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРјРµРЅС‚Р°СЂРёРµРІ: {comm-num}<br />
   [ {comments} ]<br /><br />
   [ {email} ]<br />
   [ {pm} ]<br />
@@ -18,29 +18,29 @@
 [not-logged]
 <div id="options" style="display:none;">
   <div class="ux-form">
-    <h3>Редактирование информации</h3>
+    <h3>Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё</h3>
     <ul class="ui-form">
       <li><input placeholder="E-mail" type="email" name="email" value="{editmail}" class="f_input f_wide"><div>{hidemail}</div></li>
       <li><br /></li>
-      <li><input placeholder="Ваше Имя" type="text" name="fullname" value="{fullname}" class="f_input f_wide"></li>
-      <li><input placeholder="Место жительства" type="text" name="land" value="{land}" class="f_input f_wide"></li>
-      <li><input placeholder="Номер ICQ" type="text" name="icq" value="{icq}" class="f_input f_wide"></li>
+      <li><input placeholder="Р’Р°С€Рµ РРјСЏ" type="text" name="fullname" value="{fullname}" class="f_input f_wide"></li>
+      <li><input placeholder="РњРµСЃС‚Рѕ Р¶РёС‚РµР»СЊСЃС‚РІР°" type="text" name="land" value="{land}" class="f_input f_wide"></li>
+      <li><input placeholder="РќРѕРјРµСЂ ICQ" type="text" name="icq" value="{icq}" class="f_input f_wide"></li>
       <li><br /></li>
-      <li><input placeholder="Старый пароль" type="password" name="altpass" class="f_input f_wide"></li>
-      <li><input placeholder="Новый пароль" type="password" name="password1" class="f_input f_wide"></li>
-      <li><input placeholder="Повторите" type="password" name="password2" class="f_input f_wide"></li>
+      <li><input placeholder="РЎС‚Р°СЂС‹Р№ РїР°СЂРѕР»СЊ" type="password" name="altpass" class="f_input f_wide"></li>
+      <li><input placeholder="РќРѕРІС‹Р№ РїР°СЂРѕР»СЊ" type="password" name="password1" class="f_input f_wide"></li>
+      <li><input placeholder="РџРѕРІС‚РѕСЂРёС‚Рµ" type="password" name="password2" class="f_input f_wide"></li>
       <li><br /></li>
       <li><textarea name="allowed_ip" rows="2" class="f_textarea f_wide">{allowed-ip}</textarea><br />
-        Ваш текущий IP: <b>{ip}</b><br /><div style="color:red;font-size:11px;">* Внимание! Будьте бдительны при изменении данной настройки. Доступ к Вашему аккаунту будет доступен только с того IP-адреса или подсети, который Вы укажете. Вы можете указать несколько IP адресов, по одному адресу на каждую строчку.<br />Пример: 192.48.25.71 или 129.42.*.*</div>
+        Р’Р°С€ С‚РµРєСѓС‰РёР№ IP: <b>{ip}</b><br /><div style="color:red;font-size:11px;">* Р’РЅРёРјР°РЅРёРµ! Р‘СѓРґСЊС‚Рµ Р±РґРёС‚РµР»СЊРЅС‹ РїСЂРё РёР·РјРµРЅРµРЅРёРё РґР°РЅРЅРѕР№ РЅР°СЃС‚СЂРѕР№РєРё. Р”РѕСЃС‚СѓРї Рє Р’Р°С€РµРјСѓ Р°РєРєР°СѓРЅС‚Сѓ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРµРЅ С‚РѕР»СЊРєРѕ СЃ С‚РѕРіРѕ IP-Р°РґСЂРµСЃР° РёР»Рё РїРѕРґСЃРµС‚Рё, РєРѕС‚РѕСЂС‹Р№ Р’С‹ СѓРєР°Р¶РµС‚Рµ. Р’С‹ РјРѕР¶РµС‚Рµ СѓРєР°Р·Р°С‚СЊ РЅРµСЃРєРѕР»СЊРєРѕ IP Р°РґСЂРµСЃРѕРІ, РїРѕ РѕРґРЅРѕРјСѓ Р°РґСЂРµСЃСѓ РЅР° РєР°Р¶РґСѓСЋ СЃС‚СЂРѕС‡РєСѓ.<br />РџСЂРёРјРµСЂ: 192.48.25.71 РёР»Рё 129.42.*.*</div>
       </li>
       <li><br /></li>
-      <li><label for="image">Аватар:</label><input type="file" name="image" class="f_input f_wide"><p><input type="checkbox" name="del_foto" value="yes">  Удалить фотографию</p></li>
+      <li><label for="image">РђРІР°С‚Р°СЂ:</label><input type="file" name="image" class="f_input f_wide"><p><input type="checkbox" name="del_foto" value="yes">В В РЈРґР°Р»РёС‚СЊ С„РѕС‚РѕРіСЂР°С„РёСЋ</p></li>
       <li><br /></li>
-      <li><textarea placeholder="О себе" name="info" rows="2" class="f_textarea f_wide">{editinfo}</textarea></li>
-      <li><textarea placeholder="Подпись" name="signature" rows="2" class="f_textarea f_wide">{editsignature}</textarea></li>
+      <li><textarea placeholder="Рћ СЃРµР±Рµ" name="info" rows="2" class="f_textarea f_wide">{editinfo}</textarea></li>
+      <li><textarea placeholder="РџРѕРґРїРёСЃСЊ" name="signature" rows="2" class="f_textarea f_wide">{editsignature}</textarea></li>
     </ul>
     <div class="submitline">
-      <button name="submit" class="btn f_wide" type="submit">Сохранить</button>
+      <button name="submit" class="btn f_wide" type="submit">РЎРѕС…СЂР°РЅРёС‚СЊ</button>
       <input name="submit" type="hidden" id="submit" value="submit">
     </div>
   </div>

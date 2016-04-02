@@ -68,8 +68,8 @@ $config = <<<HTML
 'max_watermark' => "$config_max_watermark",
 'max_image' => "$config_max_image",
 'jpeg_quality' => "$config_jpeg_quality",
-'description' => "Демонстрационная страница движка DataLife Engine",
-'keywords' => "DataLife, Engine, CMS, PHP движок",
+'description' => "Р”РµРјРѕРЅСЃС‚СЂР°С†РёРѕРЅРЅР°СЏ СЃС‚СЂР°РЅРёС†Р° РґРІРёР¶РєР° DataLife Engine",
+'keywords' => "DataLife, Engine, CMS, PHP РґРІРёР¶РѕРє",
 'auto_wrap' => "40",
 'meta_generator' => "1",
 
@@ -96,11 +96,11 @@ define ("PREFIX", "{$config_dbprefix}");
 ?>
 HTML;
 
-$con_file = fopen(ENGINE_DIR.'/data/dbconfig.php', "w") or die("Извините, но невозможно записать информацию в файл <b>.engine/data/dbconfig.php</b>.<br />Проверьте правильность проставленного CHMOD!");
+$con_file = fopen(ENGINE_DIR.'/data/dbconfig.php', "w") or die("РР·РІРёРЅРёС‚Рµ, РЅРѕ РЅРµРІРѕР·РјРѕР¶РЅРѕ Р·Р°РїРёСЃР°С‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ РІ С„Р°Р№Р» <b>.engine/data/dbconfig.php</b>.<br />РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РїСЂРѕСЃС‚Р°РІР»РµРЅРЅРѕРіРѕ CHMOD!");
 fwrite($con_file, $dbconfig);
 fclose($con_file);
 
-$con_file = fopen(ENGINE_DIR.'/data/config.php', "w") or die("Извините, но невозможно записать информацию в файл <b>.engine/data/config.php</b>.<br />Проверьте правильность проставленного CHMOD!");
+$con_file = fopen(ENGINE_DIR.'/data/config.php', "w") or die("РР·РІРёРЅРёС‚Рµ, РЅРѕ РЅРµРІРѕР·РјРѕР¶РЅРѕ Р·Р°РїРёСЃР°С‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ РІ С„Р°Р№Р» <b>.engine/data/config.php</b>.<br />РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РїСЂРѕСЃС‚Р°РІР»РµРЅРЅРѕРіРѕ CHMOD!");
 fwrite($con_file, $config);
 fclose($con_file);
 
@@ -116,5 +116,5 @@ $tableSchema[] = "ALTER TABLE `" . PREFIX . "_post` CHANGE `id` `id` INT NOT NUL
            $db->query ($table);
            }
 
-msgbox("info","Информация", "Обновление базы данных с версии <b>4.0</b> до версии <b>4.1</b> успешно завершено.<br />Нажмите далее для продолжения процессa обновления скрипта.");
+msgbox("info","РРЅС„РѕСЂРјР°С†РёСЏ", "РћР±РЅРѕРІР»РµРЅРёРµ Р±Р°Р·С‹ РґР°РЅРЅС‹С… СЃ РІРµСЂСЃРёРё <b>4.0</b> РґРѕ РІРµСЂСЃРёРё <b>4.1</b> СѓСЃРїРµС€РЅРѕ Р·Р°РІРµСЂС€РµРЅРѕ.<br />РќР°Р¶РјРёС‚Рµ РґР°Р»РµРµ РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ РїСЂРѕС†РµСЃСЃa РѕР±РЅРѕРІР»РµРЅРёСЏ СЃРєСЂРёРїС‚Р°.");
 ?>

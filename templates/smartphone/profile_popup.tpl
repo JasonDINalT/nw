@@ -1,9 +1,9 @@
 <div class="userinfo">
 			<ul class="reset">
-				<li><span class="grey">Полное имя:</span> <b>{fullname}</b></li>
-				<li><span class="grey">Группа:</span> {status}</li>
-				<li><span class="grey">Дата посещения:</span> <b>{lastdate}</b></li>
-				<li><span class="grey">Дата регистрации:</span> <b>{registration}</b></li>
+				<li><span class="grey">РџРѕР»РЅРѕРµ РёРјСЏ:</span> <b>{fullname}</b></li>
+				<li><span class="grey">Р“СЂСѓРїРїР°:</span> {status}</li>
+				<li><span class="grey">Р”Р°С‚Р° РїРѕСЃРµС‰РµРЅРёСЏ:</span> <b>{lastdate}</b></li>
+				<li><span class="grey">Р”Р°С‚Р° СЂРµРіРёСЃС‚СЂР°С†РёРё:</span> <b>{registration}</b></li>
 			</ul>
 		<div class="clr"></div>
 </div>

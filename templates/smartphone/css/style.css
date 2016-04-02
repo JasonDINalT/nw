@@ -1,6 +1,6 @@
 /*
 	Template created by CENTROARTS.com
-	© 2013 Centroarts.com
+	В© 2013 Centroarts.com
 */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline } article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } table { border-collapse: collapse; border-spacing: 0; }
 
@@ -193,13 +193,13 @@ small, .small { font-size: .9em }
 	#rel-news a:before { position: absolute; right: 20px; top: 50%; margin-top: -6px; background-position: -54px -14px; }
 	#rel-news a:hover:before { background-position: -30px -26px; }
 
-/* Опросы */
+/* РћРїСЂРѕСЃС‹ */
 .gr-box { text-align: center; background: #f3f3f3; padding: 20px; border-bottom: 1px dashed #dbdbdb; }
 	.vtitle, .vlist { margin-bottom: .6em; }
 	.vlist { background: #fff; text-align: left; width: 80%; padding: 14px; margin: 0 auto 15px auto; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
 	.vfoot .btn { margin: 2px; }
 
-/* Информационное сообщение */
+/* РРЅС„РѕСЂРјР°С†РёРѕРЅРЅРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ */
 .berrors { background: #fce5ba; color: #a76846; padding: 10px 20px; height: 1%; }
 	.berrors a { color: #aa4e43 }
 
@@ -282,14 +282,14 @@ textarea { resize: vertical; }
 .combofield { position: relative; padding-right: 120px; }
 	.combofield .bbcodes { width: 110px; position: absolute; top: 0; right: 0 }
 
-/* Статистика */
+/* РЎС‚Р°С‚РёСЃС‚РёРєР° */
 .tlist { width: 100%; }
 	.tlist tr { border-top: 1px dotted #eee; }
 	.tlist tr td { padding: 4px 0; }
 	.tl-right { width: 20%; text-align: right; }
 	.subtitle { margin-bottom: .4em }
 
-/* Результаты опроса */
+/* Р РµР·СѓР»СЊС‚Р°С‚С‹ РѕРїСЂРѕСЃР° */
 .voteprogress, .voteprogress span, .pollprogress, .pollprogress span { display: block; height: 6px }
 	.voteprogress, .pollprogress { background-color: #e3e3e3; padding: 1px; margin: 2px 0 8px 0; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px }
 	.voteprogress span, .pollprogress span { background: #ee4923; overflow: hidden; text-indent: -9999px; white-space: nowrap; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px }

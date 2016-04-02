@@ -1,41 +1,41 @@
 <article class="post static">
-  <h1 class="title">Персональные сообщения</h1>
-  [inbox]Входящие сообщения[/inbox] <br /> [outbox]Отправленные сообщения[/outbox] <br /> [new_pm]Отправить сообщение[/new_pm]
+  <h1 class="title">РџРµСЂСЃРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРѕР±С‰РµРЅРёСЏ</h1>
+  [inbox]Р’С…РѕРґСЏС‰РёРµ СЃРѕРѕР±С‰РµРЅРёСЏ[/inbox] <br /> [outbox]РћС‚РїСЂР°РІР»РµРЅРЅС‹Рµ СЃРѕРѕР±С‰РµРЅРёСЏ[/outbox] <br /> [new_pm]РћС‚РїСЂР°РІРёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ[/new_pm]
 </article>
 [pmlist]
 <div class="ux-form">
-  <h3>Список сообщений</h3>
+  <h3>РЎРїРёСЃРѕРє СЃРѕРѕР±С‰РµРЅРёР№</h3>
   {pmlist}
 </div>
 [/pmlist]
 [newpm]
 <div class="ux-form">
-  <h3>Отправка сообщения</h3>
+  <h3>РћС‚РїСЂР°РІРєР° СЃРѕРѕР±С‰РµРЅРёСЏ</h3>
   <ul class="ui-form">
-    <li><input placeholder="Получатель" type="text" name="name" value="{author}" class="f_input f_wide"></li>
-    <li><input placeholder="Тема" type="text" name="subj" value="{subj}" class="f_input f_wide"></li>
-    <li><textarea placeholder="Сообщение" name="comments" id="comments" rows="2" class="f_textarea f_wide">{text}</textarea></li>
-    <li><input type="checkbox" name="outboxcopy" value="1"> Сохранить сообщение в папке "Отправленные"</li>
+    <li><input placeholder="РџРѕР»СѓС‡Р°С‚РµР»СЊ" type="text" name="name" value="{author}" class="f_input f_wide"></li>
+    <li><input placeholder="РўРµРјР°" type="text" name="subj" value="{subj}" class="f_input f_wide"></li>
+    <li><textarea placeholder="РЎРѕРѕР±С‰РµРЅРёРµ" name="comments" id="comments" rows="2" class="f_textarea f_wide">{text}</textarea></li>
+    <li><input type="checkbox" name="outboxcopy" value="1"> РЎРѕС…СЂР°РЅРёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ РІ РїР°РїРєРµ "РћС‚РїСЂР°РІР»РµРЅРЅС‹Рµ"</li>
     [sec_code]
     <li>
       <div class="c-captcha-box">
-        <label for="sec_code">Повторите код:</label>
+        <label for="sec_code">РџРѕРІС‚РѕСЂРёС‚Рµ РєРѕРґ:</label>
         <div class="c-captcha">
           {sec_code}
-          <input title="Введите код указанный на картинке" type="text" name="sec_code" id="sec_code" class="f_input" >
+          <input title="Р’РІРµРґРёС‚Рµ РєРѕРґ СѓРєР°Р·Р°РЅРЅС‹Р№ РЅР° РєР°СЂС‚РёРЅРєРµ" type="text" name="sec_code" id="sec_code" class="f_input" >
         </div>
       </div>
     </li>
     [/sec_code]
     [recaptcha]
     <li>
-      <div>Введите слова</div>
+      <div>Р’РІРµРґРёС‚Рµ СЃР»РѕРІР°</div>
       {recaptcha}
     </li>
     [/recaptcha]
   </ul>
   <div class="submitline">
-    <button class="btn f_wide" name="add" type="submit" name="submit">Отправить сообщение</button>
+    <button class="btn f_wide" name="add" type="submit" name="submit">РћС‚РїСЂР°РІРёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ</button>
   </div>
 </div>
 [/newpm]
@@ -46,9 +46,9 @@
     {text}
   </div>
   <div class="com-inf">
-    <span class="arg">Сообщение от <b class="fn">{author}</b></span>
-    <span class="fast">[reply]<b class="thd">Ответить</b>[/reply]</span>
-    <span class="del">[del]<b class="thd">Удалить</b>[/del]</span>
+    <span class="arg">РЎРѕРѕР±С‰РµРЅРёРµ РѕС‚ <b class="fn">{author}</b></span>
+    <span class="fast">[reply]<b class="thd">РћС‚РІРµС‚РёС‚СЊ</b>[/reply]</span>
+    <span class="del">[del]<b class="thd">РЈРґР°Р»РёС‚СЊ</b>[/del]</span>
   </div>
 </div>
 [/readpm]

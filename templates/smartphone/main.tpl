@@ -21,14 +21,14 @@
 		</div>
 		<!-- Head Menu -->
 		<nav id="menu-head">
-			<a href="#">О сайте</a>
-			<a href="#">В мире</a>
-			<a href="#">Экономика</a>
-			<a href="#">Религия</a>
-			<a href="#">Криминал</a>
-			<a href="#">Спорт</a>
-			<a href="#">Культура</a>
-			<a href="#">Инопресса</a>
+			<a href="#">Рћ СЃР°Р№С‚Рµ</a>
+			<a href="#">Р’ РјРёСЂРµ</a>
+			<a href="#">Р­РєРѕРЅРѕРјРёРєР°</a>
+			<a href="#">Р РµР»РёРіРёСЏ</a>
+			<a href="#">РљСЂРёРјРёРЅР°Р»</a>
+			<a href="#">РЎРїРѕСЂС‚</a>
+			<a href="#">РљСѓР»СЊС‚СѓСЂР°</a>
+			<a href="#">РРЅРѕРїСЂРµСЃСЃР°</a>
 		</nav>
 		<!-- Head Menu [E] -->
 	</div>
@@ -45,37 +45,37 @@
 			<input type="hidden" name="do" value="search">
 			<input type="hidden" name="subaction" value="search">
 			<div class="quicksearch">
-				<input class="f_input" placeholder="Поиск..." name="story" value="" type="search">
-				<button type="submit" title="Search" class="thd">Найти</button>
+				<input class="f_input" placeholder="РџРѕРёСЃРє..." name="story" value="" type="search">
+				<button type="submit" title="Search" class="thd">РќР°Р№С‚Рё</button>
 			</div>
 		</form>
 		<!--Search [E]-->
-		<a id="go2full" class="ico" href="/index.php?action=mobiledisable">Полная версия сайта</a>
+		<a id="go2full" class="ico" href="/index.php?action=mobiledisable">РџРѕР»РЅР°СЏ РІРµСЂСЃРёСЏ СЃР°Р№С‚Р°</a>
 	</header>
 	<section id="content">
 		{info}
 		{content}
 	</section>
 	<div id="footmenu">
-		<h3>Навигация</h3>
+		<h3>РќР°РІРёРіР°С†РёСЏ</h3>
 		<nav class="main-nav">
-			<a href="#">О сайте</a>
-			<a href="#">В мире</a>
-			<a href="#">Экономика</a>
-			<a href="#">Религия</a>
-			<a href="#">Криминал</a>
-			<a href="#">Спорт</a>
-			<a href="#">Культура</a>
-			<a href="#">Инопресса</a>
+			<a href="#">Рћ СЃР°Р№С‚Рµ</a>
+			<a href="#">Р’ РјРёСЂРµ</a>
+			<a href="#">Р­РєРѕРЅРѕРјРёРєР°</a>
+			<a href="#">Р РµР»РёРіРёСЏ</a>
+			<a href="#">РљСЂРёРјРёРЅР°Р»</a>
+			<a href="#">РЎРїРѕСЂС‚</a>
+			<a href="#">РљСѓР»СЊС‚СѓСЂР°</a>
+			<a href="#">РРЅРѕРїСЂРµСЃСЃР°</a>
 			<span class="nav-sep"></span>
-			<a href="/index.php?do=lastnews" target="_blank">Все последние новости</a>
-			<a href="http://dle-news.ru" target="_blank">Поддержка скрипта</a>
-			<a href="/index.php?action=mobiledisable">Полная версия сайта</a>
+			<a href="/index.php?do=lastnews" target="_blank">Р’СЃРµ РїРѕСЃР»РµРґРЅРёРµ РЅРѕРІРѕСЃС‚Рё</a>
+			<a href="http://dle-news.ru" target="_blank">РџРѕРґРґРµСЂР¶РєР° СЃРєСЂРёРїС‚Р°</a>
+			<a href="/index.php?action=mobiledisable">РџРѕР»РЅР°СЏ РІРµСЂСЃРёСЏ СЃР°Р№С‚Р°</a>
 		</nav>
 	</div>
 	<footer id="footer">
 		<div class="background"></div>
-		<div id="copyright">Powered by <a href="http://dle-news.ru" target="_blank">DataLife Engine</a> © 2015</div>
+		<div id="copyright">Powered by <a href="http://dle-news.ru" target="_blank">DataLife Engine</a> В© 2015</div>
 	</footer>
 	<script type="text/javascript">
 	// <![CDATA[

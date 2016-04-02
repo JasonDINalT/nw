@@ -14,7 +14,7 @@ $config['files_force'] = "1";
 $config['files_max_speed'] = "0";
 $config['key'] = "";
 
-$handler = fopen(ENGINE_DIR.'/data/config.php', "w") or die("Извините, но невозможно записать информацию в файл <b>.engine/data/config.php</b>.<br />Проверьте правильность проставленного CHMOD!");
+$handler = fopen(ENGINE_DIR.'/data/config.php', "w") or die("РР·РІРёРЅРёС‚Рµ, РЅРѕ РЅРµРІРѕР·РјРѕР¶РЅРѕ Р·Р°РїРёСЃР°С‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ РІ С„Р°Р№Р» <b>.engine/data/config.php</b>.<br />РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РїСЂРѕСЃС‚Р°РІР»РµРЅРЅРѕРіРѕ CHMOD!");
 fwrite($handler, "<?PHP \n\n//System Configurations\n\n\$config = array (\n\n");
 foreach($config as $name => $value)
 {
@@ -41,7 +41,7 @@ $tableSchema[] = "CREATE TABLE " . PREFIX . "_rssinform (
   PRIMARY KEY  (`id`)
 ) TYPE=MyISAM /*!40101 DEFAULT CHARACTER SET cp1251 COLLATE cp1251_general_ci */";
 
-$tableSchema[] = "INSERT INTO " . PREFIX . "_rssinform VALUES (1, 'dle', 'Новости с Яндекса', '0', 'http://news.yandex.ru/index.rss', 'informer', 3, 0, 200, 1)";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_rssinform VALUES (1, 'dle', 'РќРѕРІРѕСЃС‚Рё СЃ РЇРЅРґРµРєСЃР°', '0', 'http://news.yandex.ru/index.rss', 'informer', 3, 0, 200, 1)";
 
 $tableSchema[] = "ALTER TABLE `" . PREFIX . "_usergroups` ADD `allow_modc` TINYINT( 1 ) NOT NULL DEFAULT '0'";
 $tableSchema[] = "ALTER TABLE `" . PREFIX . "_comments` ADD `approve` TINYINT( 1 ) NOT NULL DEFAULT '1'";
@@ -61,5 +61,5 @@ $tableSchema[] = "ALTER TABLE `" . PREFIX . "_post` ADD FULLTEXT (`title`)";
 
 clear_cache();
 
-msgbox("info","Информация", "Обновление базы данных с версии <b>5.7</b> до версии <b>6.0</b> успешно завершено.<br />Нажмите далее для продолжения процессa обновления скрипта.");
+msgbox("info","РРЅС„РѕСЂРјР°С†РёСЏ", "РћР±РЅРѕРІР»РµРЅРёРµ Р±Р°Р·С‹ РґР°РЅРЅС‹С… СЃ РІРµСЂСЃРёРё <b>5.7</b> РґРѕ РІРµСЂСЃРёРё <b>6.0</b> СѓСЃРїРµС€РЅРѕ Р·Р°РІРµСЂС€РµРЅРѕ.<br />РќР°Р¶РјРёС‚Рµ РґР°Р»РµРµ РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ РїСЂРѕС†РµСЃСЃa РѕР±РЅРѕРІР»РµРЅРёСЏ СЃРєСЂРёРїС‚Р°.");
 ?>

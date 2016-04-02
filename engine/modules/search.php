@@ -7,11 +7,11 @@
 -----------------------------------------------------
  Copyright (c) 2004,2015 SoftNews Media Group
 =====================================================
- Данный код защищен авторскими правами
+ Р”Р°РЅРЅС‹Р№ РєРѕРґ Р·Р°С‰РёС‰РµРЅ Р°РІС‚РѕСЂСЃРєРёРјРё РїСЂР°РІР°РјРё
 =====================================================
- Файл: search.php
+ Р¤Р°Р№Р»: search.php
 -----------------------------------------------------
- Назначение: поиск по сайту
+ РќР°Р·РЅР°С‡РµРЅРёРµ: РїРѕРёСЃРє РїРѕ СЃР°Р№С‚Сѓ
 =====================================================
 */
 if( ! defined( 'DATALIFEENGINE' ) ) {
@@ -46,7 +46,7 @@ if( ! $user_group[$member_id['user_group']]['allow_search'] ) {
 	$sql_find = "";
 	$full_s_addfield = "";
 
-	// Минимальное количество символов в слове поиска
+	// РњРёРЅРёРјР°Р»СЊРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРёРјРІРѕР»РѕРІ РІ СЃР»РѕРІРµ РїРѕРёСЃРєР°
 	$config['search_length_min'] = 4;
 
 	$tpl->load_template( 'search.tpl' );
@@ -100,34 +100,34 @@ if( ! $user_group[$member_id['user_group']]['allow_search'] ) {
 
 	if( function_exists( "get_magic_quotes_gpc" ) && get_magic_quotes_gpc() ) $story = stripslashes( $story );
 
-	$findstory = stripslashes($story); // Для вывода в поле поиска
+	$findstory = stripslashes($story); // Р”Р»СЏ РІС‹РІРѕРґР° РІ РїРѕР»Рµ РїРѕРёСЃРєР°
 	$findstory = htmlspecialchars($findstory, ENT_QUOTES, $config['charset']);
 	$story = addslashes( $story );
 
 	if ($titleonly == 2 AND !empty( $searchuser ) ) $searchuser = "";
-	if( empty( $story ) AND !empty( $searchuser ) AND $titleonly != 2) $story = "___SEARCH___ALL___"; // Для поиска всех статей
-	if( $search_start < 0 ) $search_start = 0; // Начальная страница поиска
-	if( $titleonly < 0 or $titleonly > 3 ) $titleonly = 0; // Искать в заголовках, статьях, комментариях
-	if( $replyless < 0 or $replyless > 1 ) $replyless = 0; // Искать больше или меньше ответов
-	if( $replylimit < 0 ) $replylimit = 0; // Лимит ответов
-	if( $showposts < 0 or $showposts > 1 ) $showposts = 0; // Искать в статьях или комментариях юзера
+	if( empty( $story ) AND !empty( $searchuser ) AND $titleonly != 2) $story = "___SEARCH___ALL___"; // Р”Р»СЏ РїРѕРёСЃРєР° РІСЃРµС… СЃС‚Р°С‚РµР№
+	if( $search_start < 0 ) $search_start = 0; // РќР°С‡Р°Р»СЊРЅР°СЏ СЃС‚СЂР°РЅРёС†Р° РїРѕРёСЃРєР°
+	if( $titleonly < 0 or $titleonly > 3 ) $titleonly = 0; // РСЃРєР°С‚СЊ РІ Р·Р°РіРѕР»РѕРІРєР°С…, СЃС‚Р°С‚СЊСЏС…, РєРѕРјРјРµРЅС‚Р°СЂРёСЏС…
+	if( $replyless < 0 or $replyless > 1 ) $replyless = 0; // РСЃРєР°С‚СЊ Р±РѕР»СЊС€Рµ РёР»Рё РјРµРЅСЊС€Рµ РѕС‚РІРµС‚РѕРІ
+	if( $replylimit < 0 ) $replylimit = 0; // Р›РёРјРёС‚ РѕС‚РІРµС‚РѕРІ
+	if( $showposts < 0 or $showposts > 1 ) $showposts = 0; // РСЃРєР°С‚СЊ РІ СЃС‚Р°С‚СЊСЏС… РёР»Рё РєРѕРјРјРµРЅС‚Р°СЂРёСЏС… СЋР·РµСЂР°
 	
-	$listdate = array (0, - 1, 1, 7, 14, 30, 90, 180, 365 ); // Искать за период ХХХ дней
+	$listdate = array (0, - 1, 1, 7, 14, 30, 90, 180, 365 ); // РСЃРєР°С‚СЊ Р·Р° РїРµСЂРёРѕРґ РҐРҐРҐ РґРЅРµР№
 	if( ! (in_array( $searchdate, $listdate )) ) $searchdate = 0;
-	if( $beforeafter != "after" and $beforeafter != "before" ) $beforeafter = "after"; // Искать до или после периода дней
+	if( $beforeafter != "after" and $beforeafter != "before" ) $beforeafter = "after"; // РСЃРєР°С‚СЊ РґРѕ РёР»Рё РїРѕСЃР»Рµ РїРµСЂРёРѕРґР° РґРЅРµР№
 	$listsortby = array ("date", "title", "comm_num", "news_read", "autor", "category", "rating" );
 
 	if ($config['full_search']) {
-		if( ! (in_array( $sortby, $listsortby )) ) $sortby = ""; // Сортировать по полям
+		if( ! (in_array( $sortby, $listsortby )) ) $sortby = ""; // РЎРѕСЂС‚РёСЂРѕРІР°С‚СЊ РїРѕ РїРѕР»СЏРј
 	} else {
-		if( ! (in_array( $sortby, $listsortby )) ) $sortby = "date"; // Сортировать по полям
+		if( ! (in_array( $sortby, $listsortby )) ) $sortby = "date"; // РЎРѕСЂС‚РёСЂРѕРІР°С‚СЊ РїРѕ РїРѕР»СЏРј
 	}
 
 	$listresorder = array ("desc", "asc" );
-	if( ! (in_array( $resorder, $listresorder )) ) $resorder = "desc"; // Сортировать по возрастающей или убывающей
+	if( ! (in_array( $resorder, $listresorder )) ) $resorder = "desc"; // РЎРѕСЂС‚РёСЂРѕРІР°С‚СЊ РїРѕ РІРѕР·СЂР°СЃС‚Р°СЋС‰РµР№ РёР»Рё СѓР±С‹РІР°СЋС‰РµР№
 	
 
-	// Определение выбранных ранее опций, переданных в форме
+	// РћРїСЂРµРґРµР»РµРЅРёРµ РІС‹Р±СЂР°РЅРЅС‹С… СЂР°РЅРµРµ РѕРїС†РёР№, РїРµСЂРµРґР°РЅРЅС‹С… РІ С„РѕСЂРјРµ
 	$titleonly_sel = array ('0' => '', '1' => '', '2' => '', '3' => '' );
 	$titleonly_sel[$titleonly] = 'selected="selected"';
 	$replyless_sel = array ('0' => '', '1' => '' );
@@ -148,7 +148,7 @@ if( ! $user_group[$member_id['user_group']]['allow_search'] ) {
 	if( $all_word_seach == 1 ) $all_word_seach_sel = 'checked="checked"';
 	else $all_word_seach_sel = '';
 	
-	// Вывод формы поиска
+	// Р’С‹РІРѕРґ С„РѕСЂРјС‹ РїРѕРёСЃРєР°
 	if( $category_list == "" or $category_list == "0" ) {
 		$catselall = "selected=\"selected\"";
 	} else {
@@ -156,7 +156,7 @@ if( ! $user_group[$member_id['user_group']]['allow_search'] ) {
 		$category_list = preg_replace( "/^0\,/", '', $category_list );
 	}
 	
-	// Определение и вывод доступных категорий
+	// РћРїСЂРµРґРµР»РµРЅРёРµ Рё РІС‹РІРѕРґ РґРѕСЃС‚СѓРїРЅС‹С… РєР°С‚РµРіРѕСЂРёР№
 	$cats = "<select style=\"width:95%;height:200px;\" name=\"catlist[]\" size=\"13\" multiple=\"multiple\">";
 	$cats .= "<option " . $catselall . " value=\"0\">" . $lang['s_allcat'] . "</option>";
 	$cats .= CategoryNewsSelection( explode( ',', $category_list ), 0, false );
@@ -415,16 +415,16 @@ HTML;
 HTML;
 	
 	$tpl->set( '{searchtable}', $searchtable );
-	// По умолчанию, выводится только форма поиска
+	// РџРѕ СѓРјРѕР»С‡Р°РЅРёСЋ, РІС‹РІРѕРґРёС‚СЃСЏ С‚РѕР»СЊРєРѕ С„РѕСЂРјР° РїРѕРёСЃРєР°
 	if( $subaction != "search" ) {
 		$tpl->set_block( "'\[searchmsg\](.*?)\[/searchmsg\]'si", "" );
 		$tpl->compile( 'content' );
 	}
-	// Конец вывода формы поиска
+	// РљРѕРЅРµС† РІС‹РІРѕРґР° С„РѕСЂРјС‹ РїРѕРёСЃРєР°
 	
 
 	if( $subaction == "search" ) {
-		// Вывод результатов поиска		
+		// Р’С‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ РїРѕРёСЃРєР°		
 
 		if ($config['full_search']) {
 	
@@ -461,32 +461,32 @@ HTML;
 			$tpl->compile( 'content' );
 		
 		} else {
-			// Начало подготовки поиска
+			// РќР°С‡Р°Р»Рѕ РїРѕРґРіРѕС‚РѕРІРєРё РїРѕРёСЃРєР°
 			if( $search_start ) {
 				$search_start = $search_start - 1;
 				$search_start = $search_start * $config['search_number'];
 			}
 			
-			// Проверка разрешенных категорий из списка выбранных категорий
+			// РџСЂРѕРІРµСЂРєР° СЂР°Р·СЂРµС€РµРЅРЅС‹С… РєР°С‚РµРіРѕСЂРёР№ РёР· СЃРїРёСЃРєР° РІС‹Р±СЂР°РЅРЅС‹С… РєР°С‚РµРіРѕСЂРёР№
 			$allow_cats = $user_group[$member_id['user_group']]['allow_cats'];
 			$allow_list = explode( ',', $allow_cats );
 			$stop_list = "";
 			if( $allow_list[0] == "all" ) {
-				// Все категории доступны для группы
+				// Р’СЃРµ РєР°С‚РµРіРѕСЂРёРё РґРѕСЃС‚СѓРїРЅС‹ РґР»СЏ РіСЂСѓРїРїС‹
 				if( $category_list == "" or $category_list == "0" ) {
-					// Выбран поиск по всем категориям
+					// Р’С‹Р±СЂР°РЅ РїРѕРёСЃРє РїРѕ РІСЃРµРј РєР°С‚РµРіРѕСЂРёСЏРј
 					;
 				} else {
-					// Выбран поиск по некоторым категориям
+					// Р’С‹Р±СЂР°РЅ РїРѕРёСЃРє РїРѕ РЅРµРєРѕС‚РѕСЂС‹Рј РєР°С‚РµРіРѕСЂРёСЏРј
 					$stop_list = str_replace( ',', '|', $category_list );
 				}
 			} else {
-				// Не все категории доступны для группы
+				// РќРµ РІСЃРµ РєР°С‚РµРіРѕСЂРёРё РґРѕСЃС‚СѓРїРЅС‹ РґР»СЏ РіСЂСѓРїРїС‹
 				if( $category_list == "" or $category_list == "0" ) {
-					// Выбран поиск по всем категориям
+					// Р’С‹Р±СЂР°РЅ РїРѕРёСЃРє РїРѕ РІСЃРµРј РєР°С‚РµРіРѕСЂРёСЏРј
 					$stop_list = str_replace( ',', '|', $allow_cats );
 				} else {
-					// Выбран поиск по некоторым категориям
+					// Р’С‹Р±СЂР°РЅ РїРѕРёСЃРє РїРѕ РЅРµРєРѕС‚РѕСЂС‹Рј РєР°С‚РµРіРѕСЂРёСЏРј
 					$cats_list = explode( ',', $category_list );
 					foreach ( $cats_list as $id ) {
 						if( in_array( $id, $allow_list ) ) $stop_list .= $id . '|';
@@ -494,7 +494,7 @@ HTML;
 					$stop_list = substr( $stop_list, 0, strlen( $stop_list ) - 1 );
 				}
 			}
-			// Ограничение по категориям
+			// РћРіСЂР°РЅРёС‡РµРЅРёРµ РїРѕ РєР°С‚РµРіРѕСЂРёСЏРј
 			$where_category = "";
 			if( ! empty( $stop_list ) ) {
 				
@@ -524,22 +524,22 @@ HTML;
 				}
 			}
 			
-			// Поиск по автору статьи или комментария
+			// РџРѕРёСЃРє РїРѕ Р°РІС‚РѕСЂСѓ СЃС‚Р°С‚СЊРё РёР»Рё РєРѕРјРјРµРЅС‚Р°СЂРёСЏ
 			$autor_posts = '';
 			$autor_comms = '';
 			$searchuser = $db->safesql($searchuser);
 			if( ! empty( $searchuser ) ) {
 				switch ($titleonly) {
 					case 0 :
-						// Искать только в статьях
+						// РСЃРєР°С‚СЊ С‚РѕР»СЊРєРѕ РІ СЃС‚Р°С‚СЊСЏС…
 						$autor_posts = PREFIX . "_post.autor like '$searchuser$likename'";
 						break;
 					case 3 :
-						// Искать только в статьях
+						// РСЃРєР°С‚СЊ С‚РѕР»СЊРєРѕ РІ СЃС‚Р°С‚СЊСЏС…
 						$autor_posts = PREFIX . "_post.autor like '$searchuser$likename'";
 						break;
 					case 1 :
-						// Искать только в комментариях
+						// РСЃРєР°С‚СЊ С‚РѕР»СЊРєРѕ РІ РєРѕРјРјРµРЅС‚Р°СЂРёСЏС…
 						$autor_comms = PREFIX . "_comments.autor like '$searchuser$likename'";
 						break;
 				}
@@ -551,14 +551,14 @@ HTML;
 				else $where_reply = PREFIX . "_post.comm_num <= '" . $replylimit . "'";
 			}
 			
-			// Поиск по ключевым словам
+			// РџРѕРёСЃРє РїРѕ РєР»СЋС‡РµРІС‹Рј СЃР»РѕРІР°Рј
 
 			if ($config['full_search']) {
 	
-					$titleonly_where = array ('0' => "MATCH(title,short_story,full_story,xfields) AGAINST ('{story}' IN BOOLEAN MODE)", // Искать только в статьях
-											  '1' => "MATCH(text) AGAINST ('{story}' IN BOOLEAN MODE)", // Искать только в комментариях
-											  '2' => "MATCH(" . PREFIX . "_static.template) AGAINST ('{story}' IN BOOLEAN MODE)", // Искать только в статических страницах
-											  '3' => "title LIKE '%{story}%'" ); // Искать только в заголовках статей
+					$titleonly_where = array ('0' => "MATCH(title,short_story,full_story,xfields) AGAINST ('{story}' IN BOOLEAN MODE)", // РСЃРєР°С‚СЊ С‚РѕР»СЊРєРѕ РІ СЃС‚Р°С‚СЊСЏС…
+											  '1' => "MATCH(text) AGAINST ('{story}' IN BOOLEAN MODE)", // РСЃРєР°С‚СЊ С‚РѕР»СЊРєРѕ РІ РєРѕРјРјРµРЅС‚Р°СЂРёСЏС…
+											  '2' => "MATCH(" . PREFIX . "_static.template) AGAINST ('{story}' IN BOOLEAN MODE)", // РСЃРєР°С‚СЊ С‚РѕР»СЊРєРѕ РІ СЃС‚Р°С‚РёС‡РµСЃРєРёС… СЃС‚СЂР°РЅРёС†Р°С…
+											  '3' => "title LIKE '%{story}%'" ); // РСЃРєР°С‚СЊ С‚РѕР»СЊРєРѕ РІ Р·Р°РіРѕР»РѕРІРєР°С… СЃС‚Р°С‚РµР№
 
 					if ($titleonly < 3 AND $sortby == "" ) {
 						$full_s_addfield = ", ".$titleonly_where[$titleonly]." as score";
@@ -569,10 +569,10 @@ HTML;
 
 			} else {
 	
-					$titleonly_where = array ('0' => "short_story LIKE '%{story}%' OR full_story LIKE '%{story}%' OR xfields LIKE '%{story}%' OR title LIKE '%{story}%'", // Искать только в статьях
-											  '1' => "text LIKE '%{story}%'", // Искать только в комментариях
-											  '2' => PREFIX . "_static.template LIKE '%{story}%'", // Искать только в статических страницах
-											  '3' => "title LIKE '%{story}%'" ); // Искать только в заголовках статей
+					$titleonly_where = array ('0' => "short_story LIKE '%{story}%' OR full_story LIKE '%{story}%' OR xfields LIKE '%{story}%' OR title LIKE '%{story}%'", // РСЃРєР°С‚СЊ С‚РѕР»СЊРєРѕ РІ СЃС‚Р°С‚СЊСЏС…
+											  '1' => "text LIKE '%{story}%'", // РСЃРєР°С‚СЊ С‚РѕР»СЊРєРѕ РІ РєРѕРјРјРµРЅС‚Р°СЂРёСЏС…
+											  '2' => PREFIX . "_static.template LIKE '%{story}%'", // РСЃРєР°С‚СЊ С‚РѕР»СЊРєРѕ РІ СЃС‚Р°С‚РёС‡РµСЃРєРёС… СЃС‚СЂР°РЅРёС†Р°С…
+											  '3' => "title LIKE '%{story}%'" ); // РСЃРєР°С‚СЊ С‚РѕР»СЊРєРѕ РІ Р·Р°РіРѕР»РѕРІРєР°С… СЃС‚Р°С‚РµР№
 			}
 
 			if( !empty( $story ) ) {
@@ -584,7 +584,7 @@ HTML;
 				}
 			}
 			
-			// Поиск по статьям
+			// РџРѕРёСЃРє РїРѕ СЃС‚Р°С‚СЊСЏРј
 			if( in_array( $titleonly, array (0, 3 ) ) ) {
 				$where_posts = "WHERE " . PREFIX . "_post.approve=1" . $this_date;
 				if( ! empty( $where_category ) ) $where_posts .= " AND " . $where_category;
@@ -619,7 +619,7 @@ HTML;
 
 			}
 
-			// Поиск по комментариям 
+			// РџРѕРёСЃРє РїРѕ РєРѕРјРјРµРЅС‚Р°СЂРёСЏРј 
 			if( $titleonly == 1) {
 				$where_comms = "WHERE " . PREFIX . "_post.approve=1" . $this_date;
 				if( ! empty( $where_category ) ) $where_comms .= " AND " . $where_category;
@@ -646,7 +646,7 @@ HTML;
 		
 			$order_by = $sortby . " " . $resorder;
 		
-			// Поиск в статических страницах
+			// РџРѕРёСЃРє РІ СЃС‚Р°С‚РёС‡РµСЃРєРёС… СЃС‚СЂР°РЅРёС†Р°С…
 			if( $titleonly == 2 ) {
 				$sql_from = "FROM " . PREFIX . "_static";
 				$sql_fields = "SELECT id, name AS static_name, descr AS title, template AS story, allow_template, grouplevel, date, views";
@@ -656,7 +656,7 @@ HTML;
 				$order_by = "id";
 			}
 			
-			// ------ Запрос к базе	
+			// ------ Р—Р°РїСЂРѕСЃ Рє Р±Р°Р·Рµ	
 			$from_num = $search_start + 1;
 			
 			if ($config['full_search']) {
@@ -681,7 +681,7 @@ HTML;
 			if( $count_result > ($config['search_number'] * 5) ) $count_result = ($config['search_number'] * 5);
 
 			
-			// Не найдено
+			// РќРµ РЅР°Р№РґРµРЅРѕ
 			if( ! $count_result ) {
 
 				msgbox( $lang['all_info'], $lang[search_err_2] );
@@ -693,7 +693,7 @@ HTML;
 
 				$to_num = $search_start + $found_result;
 				
-				// Вывод информации о количестве найденных результатов
+				// Р’С‹РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РєРѕР»РёС‡РµСЃС‚РІРµ РЅР°Р№РґРµРЅРЅС‹С… СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ
 				if ($titleonly == 1) {
 					$tpl->set( '{searchmsg}', '' );
 					$tpl->set_block( "'\[searchmsg\](.*?)\[/searchmsg\]'si", "" );
@@ -708,7 +708,7 @@ HTML;
 
 
 				if( $titleonly == 2 ) {
-					// Результаты поиска в статических страницах
+					// Р РµР·СѓР»СЊС‚Р°С‚С‹ РїРѕРёСЃРєР° РІ СЃС‚Р°С‚РёС‡РµСЃРєРёС… СЃС‚СЂР°РЅРёС†Р°С…
 					while ( $row = $db->get_row( $sql_result ) ) {
 
 						$row['grouplevel'] = explode( ',', $row['grouplevel'] );
@@ -803,7 +803,7 @@ HTML;
 					}
 
 				} else {
-					// Вывод результатов поиска в новостях
+					// Р’С‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ РїРѕРёСЃРєР° РІ РЅРѕРІРѕСЃС‚СЏС…
 					if ($titleonly == 0 OR $titleonly == 3) {
 
 						$tpl->load_template( 'searchresult.tpl' );
@@ -834,7 +834,7 @@ HTML;
 						}
 					}
 
-					// Вывод результатов поиска в комментариях
+					// Р’С‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ РїРѕРёСЃРєР° РІ РєРѕРјРјРµРЅС‚Р°СЂРёСЏС…
 					if ($titleonly == 1) {
 						include_once ENGINE_DIR . '/classes/comments.class.php';
 
@@ -878,7 +878,7 @@ HTML;
 	$tpl->clear();
 	
 	//####################################################################################################################
-	//         Навигация
+	//         РќР°РІРёРіР°С†РёСЏ
 	//####################################################################################################################
 	if( $found_result > 0 ) {
 		$tpl->load_template( 'navigation.tpl' );

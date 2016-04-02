@@ -1,5 +1,5 @@
 
-/* ==================== Вывод формы по умолчанию */
+/* ==================== Р’С‹РІРѕРґ С„РѕСЂРјС‹ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ */
 
 form {  
 	padding-top: 0px;
@@ -16,14 +16,14 @@ form {
 	border:1px solid #000;
 	color: #FFF;
 }
-/*---Найденные похожие новости при добавлении новостей на сайте---*/
+/*---РќР°Р№РґРµРЅРЅС‹Рµ РїРѕС…РѕР¶РёРµ РЅРѕРІРѕСЃС‚Рё РїСЂРё РґРѕР±Р°РІР»РµРЅРёРё РЅРѕРІРѕСЃС‚РµР№ РЅР° СЃР°Р№С‚Рµ---*/
 .findrelated {
 	width:99%;
 	background: #ffc;border:1px solid #9E9E9E;
 	padding: 5px;margin-top: 7px;
 	margin-right: 10px;
 }
-/* ==================== Цитата и скрытый текст */
+/* ==================== Р¦РёС‚Р°С‚Р° Рё СЃРєСЂС‹С‚С‹Р№ С‚РµРєСЃС‚ */
 
 .title_quote {
 	color: #636363;
@@ -41,7 +41,7 @@ form {
 	padding: 5px;
 }
 
-/* ==================== Тег SPOILER */
+/* ==================== РўРµРі SPOILER */
 
 .title_spoiler {
 	color: #636363;
@@ -59,7 +59,7 @@ form {
 	padding: 5px;
 }
 
-/* ==================== Tэг CODE */
+/* ==================== TСЌРі CODE */
 
 .scriptcode {
 	color: #757575;
@@ -69,7 +69,7 @@ form {
 	padding: 5px;
 }
 
-/* ==================== BB коды */
+/* ==================== BB РєРѕРґС‹ */
  
 .editor_button {
 	float: left;
@@ -97,7 +97,7 @@ form {
 .editbclose img {margin: 0; padding: 0;}
 .editor_button_brk img {margin: 0; padding: 0;}
 
-/* ==================== Дополнительные поля новостей */
+/* ==================== Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїРѕР»СЏ РЅРѕРІРѕСЃС‚РµР№ */
 
 .xfields textarea {
 	color: #757575;		/* ! */
@@ -124,7 +124,7 @@ form {
 	border: 1px solid #e0e0e0;
 }
 
-/* ==================== Дополнительные поля профиля пользователей */
+/* ==================== Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїРѕР»СЏ РїСЂРѕС„РёР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ */
 
 .xprofile textarea {
 	color: #757575;		/* ! */
@@ -143,7 +143,7 @@ form {
 	border: 1px solid #e0e0e0;
 }
 
-/* ==================== Выпадающее меню */
+/* ==================== Р’С‹РїР°РґР°СЋС‰РµРµ РјРµРЅСЋ */
 
 #dropmenudiv {
 	border: 1px solid #ffffff;
@@ -173,13 +173,13 @@ form {
 	background:#fdd08b;
 	color:#000000;
 }
-/* ==================== Опрос пользователей */
+/* ==================== РћРїСЂРѕСЃ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ */
 
 .vote {
 	color: #757575;
 }
 
-/* ==================== Уведомление о получении новых PM */
+/* ==================== РЈРІРµРґРѕРјР»РµРЅРёРµ Рѕ РїРѕР»СѓС‡РµРЅРёРё РЅРѕРІС‹С… PM */
 
 #newpm {
 	position: absolute;
@@ -212,13 +212,13 @@ form {
 	text-decoration: underline;
 }
 
-/* ==================== Ссылка на скачивание прикрепленного файла */
+/* ==================== РЎСЃС‹Р»РєР° РЅР° СЃРєР°С‡РёРІР°РЅРёРµ РїСЂРёРєСЂРµРїР»РµРЅРЅРѕРіРѕ С„Р°Р№Р»Р° */
 
 .attachment {
 	color: #808080;
 }
 
-/* ==================== Поиск по сайту и результаты поиска */
+/* ==================== РџРѕРёСЃРє РїРѕ СЃР°Р№С‚Сѓ Рё СЂРµР·СѓР»СЊС‚Р°С‚С‹ РїРѕРёСЃРєР° */
 
 .search {
 	color: #757575;
@@ -234,7 +234,7 @@ form {
 }
 
 
-/* ==================== Рамка расширенной формы поиска по сайту */
+/* ==================== Р Р°РјРєР° СЂР°СЃС€РёСЂРµРЅРЅРѕР№ С„РѕСЂРјС‹ РїРѕРёСЃРєР° РїРѕ СЃР°Р№С‚Сѓ */
 
 	fieldset {
 		border: 1px solid #e0e0e0;
@@ -244,7 +244,7 @@ form {
 		font-family: tahoma;	/* ! */
 	}
 
-/* ==================== показ оригинальной картинки загруженной на сайт из уменьшенной копии */
+/* ==================== РїРѕРєР°Р· РѕСЂРёРіРёРЅР°Р»СЊРЅРѕР№ РєР°СЂС‚РёРЅРєРё Р·Р°РіСЂСѓР¶РµРЅРЅРѕР№ РЅР° СЃР°Р№С‚ РёР· СѓРјРµРЅСЊС€РµРЅРЅРѕР№ РєРѕРїРёРё */
 .highslide-active-anchor img {
 	visibility: hidden;
 }
@@ -292,7 +292,7 @@ a.highslide-full-expand {
     display: none;
 }
 
-/*---Показ древовидных комментариев---*/
+/*---РџРѕРєР°Р· РґСЂРµРІРѕРІРёРґРЅС‹С… РєРѕРјРјРµРЅС‚Р°СЂРёРµРІ---*/
 .comments-tree-list {
 	display: block;
 	margin: 0;
@@ -310,7 +310,7 @@ a.highslide-full-expand {
 	padding: 0;
 }
 
-/*---Форма быстрого ответа на комментарий---*/
+/*---Р¤РѕСЂРјР° Р±С‹СЃС‚СЂРѕРіРѕ РѕС‚РІРµС‚Р° РЅР° РєРѕРјРјРµРЅС‚Р°СЂРёР№---*/
 
 #dlefastreplycomments {
 	padding:5px;
@@ -323,7 +323,7 @@ a.highslide-full-expand {
 	width: 200px;
 }
 
-/* ==================== Облако тегов */
+/* ==================== РћР±Р»Р°РєРѕ С‚РµРіРѕРІ */
 .clouds_xsmall {
 	font-size: x-small;
 }
@@ -339,7 +339,7 @@ a.highslide-full-expand {
 .clouds_xlarge {
 	font-size: x-large;
 }
-/*---Диалоговые и всплывающие окна jQuery UI---*/
+/*---Р”РёР°Р»РѕРіРѕРІС‹Рµ Рё РІСЃРїР»С‹РІР°СЋС‰РёРµ РѕРєРЅР° jQuery UI---*/
 .ui-widget-overlay { background: #bfbfbf; opacity:0.7; -moz-opacity:0.7; filter:alpha(opacity=70); left: 0; top: 0; right: 0; bottom: 0; position: fixed; }
 .ui-helper-clearfix:after { clear: both; content: "."; display: block; height: 0; visibility: hidden }
 .ui-helper-clearfix { display: inline-block }
@@ -362,7 +362,7 @@ a.highslide-full-expand {
 
 .ui-state-error { background: #fef1ec 50% 50% repeat-x !important; border: 1px solid #cd0a0a; color: #cd0a0a; }
 
-/*---BB Редактор---*/
+/*---BB Р РµРґР°РєС‚РѕСЂ---*/
 .bb-editor textarea { 
     -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
     padding: 2px; border: 1px solid #bcc0c2; width: 100%; background: #fff;
@@ -370,5 +370,5 @@ a.highslide-full-expand {
 .editorcomm .bb-editor { width: 465px; }
 .editorcomm .bb-editor textarea { height: 156px; }
 
-/*---Выделение текста и всплывающее окно (поделиться ссылкой)---*/
+/*---Р’С‹РґРµР»РµРЅРёРµ С‚РµРєСЃС‚Р° Рё РІСЃРїР»С‹РІР°СЋС‰РµРµ РѕРєРЅРѕ (РїРѕРґРµР»РёС‚СЊСЃСЏ СЃСЃС‹Р»РєРѕР№)---*/
 #marker-bar, #txtselect_marker, #share-popup { display: none; }

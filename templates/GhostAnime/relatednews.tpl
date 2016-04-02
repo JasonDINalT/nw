@@ -1,1 +1,0 @@
-<li><a href="{link}"><strong>{title}</strong></a></li>

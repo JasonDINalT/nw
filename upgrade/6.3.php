@@ -7,14 +7,14 @@ if( ! defined( 'DATALIFEENGINE' ) ) {
 
 $config['version_id'] = "6.5";
 $config['key'] = "";
-$config['short_title'] = "Главная страница";
+$config['short_title'] = "Р“Р»Р°РІРЅР°СЏ СЃС‚СЂР°РЅРёС†Р°";
 $config['allow_rss'] = "1";
 $config['rss_mtype'] = "0";
 $config['rss_number'] = $config['news_number'];
 $config['rss_format'] = "1";
 
 
-$handler = fopen(ENGINE_DIR.'/data/config.php', "w") or die("Извините, но невозможно записать информацию в файл <b>.engine/data/config.php</b>.<br />Проверьте правильность проставленного CHMOD!");
+$handler = fopen(ENGINE_DIR.'/data/config.php', "w") or die("РР·РІРёРЅРёС‚Рµ, РЅРѕ РЅРµРІРѕР·РјРѕР¶РЅРѕ Р·Р°РїРёСЃР°С‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ РІ С„Р°Р№Р» <b>.engine/data/config.php</b>.<br />РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РїСЂРѕСЃС‚Р°РІР»РµРЅРЅРѕРіРѕ CHMOD!");
 fwrite($handler, "<?PHP \n\n//System Configurations\n\n\$config = array (\n\n");
 foreach($config as $name => $value)
 {
@@ -53,7 +53,7 @@ define ("COLLATE", "cp1251");
 ?>
 HTML;
 
-$con_file = fopen(ENGINE_DIR.'/data/dbconfig.php', "w") or die("Извините, но невозможно записать информацию в файл <b>.engine/data/dbconfig.php</b>.<br />Проверьте правильность проставленного CHMOD!");
+$con_file = fopen(ENGINE_DIR.'/data/dbconfig.php', "w") or die("РР·РІРёРЅРёС‚Рµ, РЅРѕ РЅРµРІРѕР·РјРѕР¶РЅРѕ Р·Р°РїРёСЃР°С‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ РІ С„Р°Р№Р» <b>.engine/data/dbconfig.php</b>.<br />РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РїСЂРѕСЃС‚Р°РІР»РµРЅРЅРѕРіРѕ CHMOD!");
 fwrite($con_file, $dbconfig);
 fclose($con_file);
 
@@ -76,5 +76,5 @@ $tableSchema[] = "ALTER TABLE `" . PREFIX . "_static` ADD `template_folder` VARC
 
 clear_cache();
 
-msgbox("info","Информация", "Обновление базы данных с версии <b>6.3</b> до версии <b>6.5</b> успешно завершено.<br />Нажмите далее для продолжения процессa обновления скрипта.");
+msgbox("info","РРЅС„РѕСЂРјР°С†РёСЏ", "РћР±РЅРѕРІР»РµРЅРёРµ Р±Р°Р·С‹ РґР°РЅРЅС‹С… СЃ РІРµСЂСЃРёРё <b>6.3</b> РґРѕ РІРµСЂСЃРёРё <b>6.5</b> СѓСЃРїРµС€РЅРѕ Р·Р°РІРµСЂС€РµРЅРѕ.<br />РќР°Р¶РјРёС‚Рµ РґР°Р»РµРµ РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ РїСЂРѕС†РµСЃСЃa РѕР±РЅРѕРІР»РµРЅРёСЏ СЃРєСЂРёРїС‚Р°.");
 ?>

@@ -1,27 +1,27 @@
 <article class="post static">
-	<h1>Восстановление пароля</h1>
+	<h1>Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РїР°СЂРѕР»СЏ</h1>
 </article>
 <div class="ux-form">
 	<ul class="ui-form">
-		<li><input placeholder="Логин или E-mail" class="f_input f_wide" type="text" name="lostname" id="lostname"></li>
+		<li><input placeholder="Р›РѕРіРёРЅ РёР»Рё E-mail" class="f_input f_wide" type="text" name="lostname" id="lostname"></li>
 		[sec_code]
 		<li>
 			<div class="c-captcha-box">
-				<label for="sec_code">Повторите код:</label>
+				<label for="sec_code">РџРѕРІС‚РѕСЂРёС‚Рµ РєРѕРґ:</label>
 				<div class="c-captcha">
 					{code}
-					<input title="Введите код указанный на картинке" type="text" name="sec_code" id="sec_code" class="f_input" >
+					<input title="Р’РІРµРґРёС‚Рµ РєРѕРґ СѓРєР°Р·Р°РЅРЅС‹Р№ РЅР° РєР°СЂС‚РёРЅРєРµ" type="text" name="sec_code" id="sec_code" class="f_input" >
 				</div>
 			</div>
 		</li>
 		[/sec_code]
 		[recaptcha]
 		<li>
-			<div>Введите слова</div>
+			<div>Р’РІРµРґРёС‚Рµ СЃР»РѕРІР°</div>
 			{recaptcha}
 		</li>
 		[/recaptcha]
 	<div class="submitline">
-		<button name="submit" class="btn f_wide" type="submit">Восстановить</button>
+		<button name="submit" class="btn f_wide" type="submit">Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ</button>
 	</div>
 </div>

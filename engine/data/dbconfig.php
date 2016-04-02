@@ -12,9 +12,9 @@ define ("PREFIX", "dle");
 
 define ("USERPREFIX", "dle");
 
-define ("COLLATE", "cp1251");
+define ("COLLATE", "utf8");
 
-define('SECURE_AUTH_KEY', '7^Hob<6^I[ZpGFrDa[HZ6*:BN!`Xjj[dm5uuB1]#>tDsvP>=d:~dYG|dd|nNr1zO');
+define('SECURE_AUTH_KEY', '`5p2zrVBU/|9PhOIn i6GV)1B2sg!m^s3ZL}Bmgg=IPre#u{P|.1iSiN~oaY@zn-');
 
 $db = new db;
 

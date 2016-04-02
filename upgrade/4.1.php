@@ -74,7 +74,7 @@ $config = <<<HTML
 ?>
 HTML;
 
-$con_file = fopen(ENGINE_DIR.'/data/config.php', "w") or die("Извините, но невозможно записать информацию в файл <b>.engine/data/config.php</b>.<br />Проверьте правильность проставленного CHMOD!");
+$con_file = fopen(ENGINE_DIR.'/data/config.php', "w") or die("РР·РІРёРЅРёС‚Рµ, РЅРѕ РЅРµРІРѕР·РјРѕР¶РЅРѕ Р·Р°РїРёСЃР°С‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ РІ С„Р°Р№Р» <b>.engine/data/config.php</b>.<br />РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РїСЂРѕСЃС‚Р°РІР»РµРЅРЅРѕРіРѕ CHMOD!");
 fwrite($con_file, $config);
 fclose($con_file);
 
@@ -112,15 +112,15 @@ $tableSchema[] = "CREATE TABLE " . PREFIX . "_usergroups (
   PRIMARY KEY  (`id`)
 ) TYPE=MyISAM /*!40101 DEFAULT CHARACTER SET cp1251 COLLATE cp1251_general_ci */";
 
-$tableSchema[] = "insert into " . PREFIX . "_usergroups VALUES (1, 'Администраторы', 'all', 1, 'all', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 50, 101, 1, 1, 1, 0, 1, 1)";
-$tableSchema[] = "insert into " . PREFIX . "_usergroups VALUES (2, 'Главные редакторы', 'all', 1, 'all', 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 50, 101, 1, 1, 1, 0, 2, 1)";
-$tableSchema[] = "insert into " . PREFIX . "_usergroups VALUES (3, 'Журналисты', 'all', 1, 'all', 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 50, 101, 1, 1, 1, 0, 3, 0)";
-$tableSchema[] = "insert into " . PREFIX . "_usergroups VALUES (4, 'Посетители', 'all', 1, 'all', 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 20, 101, 1, 1, 1, 0, 4, 0)";
-$tableSchema[] = "insert into " . PREFIX . "_usergroups VALUES (5, 'Гости', 'all', 0, 'all', 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 5, 0)";
+$tableSchema[] = "insert into " . PREFIX . "_usergroups VALUES (1, 'РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂС‹', 'all', 1, 'all', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 50, 101, 1, 1, 1, 0, 1, 1)";
+$tableSchema[] = "insert into " . PREFIX . "_usergroups VALUES (2, 'Р“Р»Р°РІРЅС‹Рµ СЂРµРґР°РєС‚РѕСЂС‹', 'all', 1, 'all', 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 50, 101, 1, 1, 1, 0, 2, 1)";
+$tableSchema[] = "insert into " . PREFIX . "_usergroups VALUES (3, 'Р–СѓСЂРЅР°Р»РёСЃС‚С‹', 'all', 1, 'all', 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 50, 101, 1, 1, 1, 0, 3, 0)";
+$tableSchema[] = "insert into " . PREFIX . "_usergroups VALUES (4, 'РџРѕСЃРµС‚РёС‚РµР»Рё', 'all', 1, 'all', 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 20, 101, 1, 1, 1, 0, 4, 0)";
+$tableSchema[] = "insert into " . PREFIX . "_usergroups VALUES (5, 'Р“РѕСЃС‚Рё', 'all', 0, 'all', 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 5, 0)";
 
            foreach($tableSchema as $table) {
            $db->query ($table);
            }
 
-msgbox("info","Информация", "Обновление базы данных с версии <b>4.1</b> до версии <b>4.2</b> успешно завершено.<br />Нажмите далее для продолжения процессa обновления скрипта.");
+msgbox("info","РРЅС„РѕСЂРјР°С†РёСЏ", "РћР±РЅРѕРІР»РµРЅРёРµ Р±Р°Р·С‹ РґР°РЅРЅС‹С… СЃ РІРµСЂСЃРёРё <b>4.1</b> РґРѕ РІРµСЂСЃРёРё <b>4.2</b> СѓСЃРїРµС€РЅРѕ Р·Р°РІРµСЂС€РµРЅРѕ.<br />РќР°Р¶РјРёС‚Рµ РґР°Р»РµРµ РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ РїСЂРѕС†РµСЃСЃa РѕР±РЅРѕРІР»РµРЅРёСЏ СЃРєСЂРёРїС‚Р°.");
 ?>

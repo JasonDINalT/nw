@@ -12,7 +12,7 @@ $skin_header = <<<HTML
   <meta charset="{$config['charset']}">
   <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-  <title>DataLife Engine - Обновление</title>
+  <title>DataLife Engine - РћР±РЅРѕРІР»РµРЅРёРµ</title>
   <link href="../engine/skins/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../engine/skins/javascripts/application.js"></script>
 <style type="text/css">
@@ -27,14 +27,14 @@ body {
 <body>
 <script language="javascript" type="text/javascript">
 <!--
-var dle_act_lang   = ["Да", "Нет", "Ввод", "Отмена", "Загрузка изображений и файлов на сервер"];
-var cal_language   = {en:{months:['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],dayOfWeek:["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"]}};
+var dle_act_lang   = ["Р”Р°", "РќРµС‚", "Р’РІРѕРґ", "РћС‚РјРµРЅР°", "Р—Р°РіСЂСѓР·РєР° РёР·РѕР±СЂР°Р¶РµРЅРёР№ Рё С„Р°Р№Р»РѕРІ РЅР° СЃРµСЂРІРµСЂ"];
+var cal_language   = {en:{months:['РЇРЅРІР°СЂСЊ','Р¤РµРІСЂР°Р»СЊ','РњР°СЂС‚','РђРїСЂРµР»СЊ','РњР°Р№','РСЋРЅСЊ','РСЋР»СЊ','РђРІРіСѓСЃС‚','РЎРµРЅС‚СЏР±СЂСЊ','РћРєС‚СЏР±СЂСЊ','РќРѕСЏР±СЂСЊ','Р”РµРєР°Р±СЂСЊ'],dayOfWeek:["Р’СЃ", "РџРЅ", "Р’С‚", "РЎСЂ", "Р§С‚", "РџС‚", "РЎР±"]}};
 //-->
 </script>
 <nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
-    <a class="navbar-brand" href="">Мастер обновления DataLife Engine</a>
+    <a class="navbar-brand" href="">РњР°СЃС‚РµСЂ РѕР±РЅРѕРІР»РµРЅРёСЏ DataLife Engine</a>
   </div>
 </nav>
 <div class="container">
@@ -77,7 +77,7 @@ echo <<<HTML
 		{$text}
 	</div>
 	<div class="row box-section">	
-		<input class="btn btn-green" type=submit value="Продолжить">
+		<input class="btn btn-green" type=submit value="РџСЂРѕРґРѕР»Р¶РёС‚СЊ">
 	</div>
 	
   </div>
@@ -98,7 +98,7 @@ $login_panel = <<<HTML
   <meta charset="{$config['charset']}">
   <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-  <title>DataLife Engine - Обновление</title>
+  <title>DataLife Engine - РћР±РЅРѕРІР»РµРЅРёРµ</title>
   <link href="../engine/skins/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../engine/skins/javascripts/application.js"></script>
 <style type="text/css">
@@ -145,7 +145,7 @@ var cal_language   = {en:{months:[],dayOfWeek:[]}};
 <nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
-    <a class="navbar-brand" href="">Мастер обновления DataLife Engine</a>
+    <a class="navbar-brand" href="">РњР°СЃС‚РµСЂ РѕР±РЅРѕРІР»РµРЅРёСЏ DataLife Engine</a>
   </div>
 </nav>
 <div class="container">
@@ -157,7 +157,7 @@ var cal_language   = {en:{months:[],dayOfWeek:[]}};
 	<div class="login box" style="margin-top: 80px;">
 
       <div class="box-header">
-        <span class="title">Требуется авторизация</span>
+        <span class="title">РўСЂРµР±СѓРµС‚СЃСЏ Р°РІС‚РѕСЂРёР·Р°С†РёСЏ</span>
       </div>
 	  
       <div class="box-content padded">
@@ -166,19 +166,19 @@ var cal_language   = {en:{months:[],dayOfWeek:[]}};
             <span class="input-group-addon">
               <i class="icon-user"></i>
             </span>
-            <input type="text" name="username" placeholder="Введите свой логин">
+            <input type="text" name="username" placeholder="Р’РІРµРґРёС‚Рµ СЃРІРѕР№ Р»РѕРіРёРЅ">
           </div>
 
           <div class="input-group addon-left">
             <span class="input-group-addon">
               <i class="icon-key"></i>
             </span>
-            <input type="password" name="password" placeholder="Введите свой пароль">
+            <input type="password" name="password" placeholder="Р’РІРµРґРёС‚Рµ СЃРІРѕР№ РїР°СЂРѕР»СЊ">
           </div>
 
 		  <div class="input-group addon-left">
-			Для обновления скрипта, вам необходимо ввести администраторский логин и пароль.
-			<br /><br /><button type="submit" class="btn btn-blue btn-block">Войти <i class="icon-signin"></i></button>
+			Р”Р»СЏ РѕР±РЅРѕРІР»РµРЅРёСЏ СЃРєСЂРёРїС‚Р°, РІР°Рј РЅРµРѕР±С…РѕРґРёРјРѕ РІРІРµСЃС‚Рё Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂСЃРєРёР№ Р»РѕРіРёРЅ Рё РїР°СЂРѕР»СЊ.
+			<br /><br /><button type="submit" class="btn btn-blue btn-block">Р’РѕР№С‚Рё <i class="icon-signin"></i></button>
           </div>
 
         </form>
@@ -249,7 +249,7 @@ if ($_POST['action'] == "dologin")
 	        $_SESSION['member_password']    = $login_password;
 	
 	        $is_logged = TRUE;
-	} else $result="<font color=\"red\">Неверно введен логин или пароль!</font>";
+	} else $result="<font color=\"red\">РќРµРІРµСЂРЅРѕ РІРІРµРґРµРЅ Р»РѕРіРёРЅ РёР»Рё РїР°СЂРѕР»СЊ!</font>";
 
 	$db->free();
 }
@@ -261,19 +261,19 @@ if(!$is_logged) {
 }
 
 if(!is_writable(ENGINE_DIR.'/data/')){
-	msgbox("info","Информация", "Установите права для записи на папку 'engine/data/' CHMOD 777");
+	msgbox("info","РРЅС„РѕСЂРјР°С†РёСЏ", "РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РїСЂР°РІР° РґР»СЏ Р·Р°РїРёСЃРё РЅР° РїР°РїРєСѓ 'engine/data/' CHMOD 777");
 }
 
 if(!is_writable(ENGINE_DIR.'/data/config.php')){
-	msgbox("info","Информация", "Установите права для записи на файл 'engine/data/config.php' CHMOD 666");
+	msgbox("info","РРЅС„РѕСЂРјР°С†РёСЏ", "РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РїСЂР°РІР° РґР»СЏ Р·Р°РїРёСЃРё РЅР° С„Р°Р№Р» 'engine/data/config.php' CHMOD 666");
 }
 
 if(!is_writable(ENGINE_DIR.'/data/dbconfig.php')){
-	msgbox("info","Информация", "Установите права для записи на файл 'engine/data/dbconfig.php' CHMOD 666");
+	msgbox("info","РРЅС„РѕСЂРјР°С†РёСЏ", "РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РїСЂР°РІР° РґР»СЏ Р·Р°РїРёСЃРё РЅР° С„Р°Р№Р» 'engine/data/dbconfig.php' CHMOD 666");
 }
 
 if(!is_writable(ENGINE_DIR.'/data/xfields.txt')){
-	msgbox("info","Информация", "Установите права для записи на файл 'engine/data/xfields.txt' CHMOD 666");
+	msgbox("info","РРЅС„РѕСЂРјР°С†РёСЏ", "РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РїСЂР°РІР° РґР»СЏ Р·Р°РїРёСЃРё РЅР° С„Р°Р№Р» 'engine/data/xfields.txt' CHMOD 666");
 }
 
 if( !$_SESSION['dle_update'] ) {
@@ -285,17 +285,17 @@ echo <<<HTML
 <input type="hidden" name="next" value="start">
 <div class="box">
   <div class="box-header">
-    <div class="title">Информация</div>
+    <div class="title">РРЅС„РѕСЂРјР°С†РёСЏ</div>
   </div>
   <div class="box-content">
 	<div class="row box-section">
-		<font color="red"><b>Внимание:</b></font><br /><br />Прежде чем приступить к процедуре обновления скрипта и базы данных, убедитесь что вы создали и сохранили у себя полные бекапы файлов скрипта и базы данных. Процедура обновления вносит необратимые изменения в структуру базы данных, отмена которых в будущем будет невозможна, вернуть в предыдущее состояние базу данных, можно будет только путем восстановления бекапов базы данных. Также во время процедуры обновления скрипт выполняет тяжелые запросы к базе данных, выполнение которых может потребовать продолжительное время, поэтому обновление рекомендуется проводить во время минимальной нагрузки на сервер. Для больших сайтов, имеющие большое количество публикаций, рекомендуется предварительно проводить обновление на локальном компьютере.
+		<font color="red"><b>Р’РЅРёРјР°РЅРёРµ:</b></font><br /><br />РџСЂРµР¶РґРµ С‡РµРј РїСЂРёСЃС‚СѓРїРёС‚СЊ Рє РїСЂРѕС†РµРґСѓСЂРµ РѕР±РЅРѕРІР»РµРЅРёСЏ СЃРєСЂРёРїС‚Р° Рё Р±Р°Р·С‹ РґР°РЅРЅС‹С…, СѓР±РµРґРёС‚РµСЃСЊ С‡С‚Рѕ РІС‹ СЃРѕР·РґР°Р»Рё Рё СЃРѕС…СЂР°РЅРёР»Рё Сѓ СЃРµР±СЏ РїРѕР»РЅС‹Рµ Р±РµРєР°РїС‹ С„Р°Р№Р»РѕРІ СЃРєСЂРёРїС‚Р° Рё Р±Р°Р·С‹ РґР°РЅРЅС‹С…. РџСЂРѕС†РµРґСѓСЂР° РѕР±РЅРѕРІР»РµРЅРёСЏ РІРЅРѕСЃРёС‚ РЅРµРѕР±СЂР°С‚РёРјС‹Рµ РёР·РјРµРЅРµРЅРёСЏ РІ СЃС‚СЂСѓРєС‚СѓСЂСѓ Р±Р°Р·С‹ РґР°РЅРЅС‹С…, РѕС‚РјРµРЅР° РєРѕС‚РѕСЂС‹С… РІ Р±СѓРґСѓС‰РµРј Р±СѓРґРµС‚ РЅРµРІРѕР·РјРѕР¶РЅР°, РІРµСЂРЅСѓС‚СЊ РІ РїСЂРµРґС‹РґСѓС‰РµРµ СЃРѕСЃС‚РѕСЏРЅРёРµ Р±Р°Р·Сѓ РґР°РЅРЅС‹С…, РјРѕР¶РЅРѕ Р±СѓРґРµС‚ С‚РѕР»СЊРєРѕ РїСѓС‚РµРј РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ Р±РµРєР°РїРѕРІ Р±Р°Р·С‹ РґР°РЅРЅС‹С…. РўР°РєР¶Рµ РІРѕ РІСЂРµРјСЏ РїСЂРѕС†РµРґСѓСЂС‹ РѕР±РЅРѕРІР»РµРЅРёСЏ СЃРєСЂРёРїС‚ РІС‹РїРѕР»РЅСЏРµС‚ С‚СЏР¶РµР»С‹Рµ Р·Р°РїСЂРѕСЃС‹ Рє Р±Р°Р·Рµ РґР°РЅРЅС‹С…, РІС‹РїРѕР»РЅРµРЅРёРµ РєРѕС‚РѕСЂС‹С… РјРѕР¶РµС‚ РїРѕС‚СЂРµР±РѕРІР°С‚СЊ РїСЂРѕРґРѕР»Р¶РёС‚РµР»СЊРЅРѕРµ РІСЂРµРјСЏ, РїРѕСЌС‚РѕРјСѓ РѕР±РЅРѕРІР»РµРЅРёРµ СЂРµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ РїСЂРѕРІРѕРґРёС‚СЊ РІРѕ РІСЂРµРјСЏ РјРёРЅРёРјР°Р»СЊРЅРѕР№ РЅР°РіСЂСѓР·РєРё РЅР° СЃРµСЂРІРµСЂ. Р”Р»СЏ Р±РѕР»СЊС€РёС… СЃР°Р№С‚РѕРІ, РёРјРµСЋС‰РёРµ Р±РѕР»СЊС€РѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РїСѓР±Р»РёРєР°С†РёР№, СЂРµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ РїСЂРµРґРІР°СЂРёС‚РµР»СЊРЅРѕ РїСЂРѕРІРѕРґРёС‚СЊ РѕР±РЅРѕРІР»РµРЅРёРµ РЅР° Р»РѕРєР°Р»СЊРЅРѕРј РєРѕРјРїСЊСЋС‚РµСЂРµ.
 	</div>
 	<div class="row box-section">
-		Текущая версия скрипта: <b>{$version_id}</b>, обновление будет пошагово произведено до версии: <b>{$dle_version}</b>
+		РўРµРєСѓС‰Р°СЏ РІРµСЂСЃРёСЏ СЃРєСЂРёРїС‚Р°: <b>{$version_id}</b>, РѕР±РЅРѕРІР»РµРЅРёРµ Р±СѓРґРµС‚ РїРѕС€Р°РіРѕРІРѕ РїСЂРѕРёР·РІРµРґРµРЅРѕ РґРѕ РІРµСЂСЃРёРё: <b>{$dle_version}</b>
 	</div>
 	<div class="row box-section">	
-		<input class="btn btn-green" type=submit value="Продолжить">
+		<input class="btn btn-green" type=submit value="РџСЂРѕРґРѕР»Р¶РёС‚СЊ">
 	</div>
 	
   </div>

@@ -11,11 +11,11 @@
 	.errorWrap { padding: 20px; }
 	.errorTitle { margin: 0; font-size: 32px; line-height: normal; letter-spacing: -0.02em }
 </style>
-<title>Сайт временно отключен</title>
+<title>РЎР°Р№С‚ РІСЂРµРјРµРЅРЅРѕ РѕС‚РєР»СЋС‡РµРЅ</title>
 </head>
 <body>
 	<div class="errorWrap">
-		<h2 class="errorTitle">Сайт временно отключен</h2>
+		<h2 class="errorTitle">РЎР°Р№С‚ РІСЂРµРјРµРЅРЅРѕ РѕС‚РєР»СЋС‡РµРЅ</h2>
 		<p>{reason}</p>
 	</div>
 </body>

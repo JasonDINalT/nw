@@ -7,11 +7,11 @@
 -----------------------------------------------------
  Copyright (c) 2004,2015 SoftNews Media Group
 =====================================================
- Данный код защищен авторскими правами
+ Р”Р°РЅРЅС‹Р№ РєРѕРґ Р·Р°С‰РёС‰РµРЅ Р°РІС‚РѕСЂСЃРєРёРјРё РїСЂР°РІР°РјРё
 =====================================================
- Файл: calendar.php
+ Р¤Р°Р№Р»: calendar.php
 -----------------------------------------------------
- Назначение: AJAX для вывода календаря
+ РќР°Р·РЅР°С‡РµРЅРёРµ: AJAX РґР»СЏ РІС‹РІРѕРґР° РєР°Р»РµРЅРґР°СЂСЏ
 =====================================================
 */
 
@@ -69,7 +69,7 @@ if( $config["lang_" . $config['skin']] ) {
 $config['charset'] = ($lang['charset'] != '') ? $lang['charset'] : $config['charset'];
 
 
-# Генерируем календарь
+# Р“РµРЅРµСЂРёСЂСѓРµРј РєР°Р»РµРЅРґР°СЂСЊ
 function cal($cal_month, $cal_year, $events) {
 	global $f, $r, $year, $month, $config, $lang, $langdateshortweekdays, $PHP_SELF;
 	
@@ -112,11 +112,11 @@ function cal($cal_month, $cal_year, $events) {
 	
 	$buffer = str_replace( $f, $r, $buffer );
 	
-	# Дни недели: рабочая неделя
+	# Р”РЅРё РЅРµРґРµР»Рё: СЂР°Р±РѕС‡Р°СЏ РЅРµРґРµР»СЏ
 	for($it = 1; $it < 6; $it ++)
 		$buffer .= '<th class="workday">' . $langdateshortweekdays[$it] . '</th>';
 		
-	# Дни недели: субботний и воскресный дни
+	# Р”РЅРё РЅРµРґРµР»Рё: СЃСѓР±Р±РѕС‚РЅРёР№ Рё РІРѕСЃРєСЂРµСЃРЅС‹Р№ РґРЅРё
 	$buffer .= '<th class="weekday">' . $langdateshortweekdays[6] . '</th>';
 	$buffer .= '<th class="weekday">' . $langdateshortweekdays[0] . '</th>';
 	
@@ -135,11 +135,11 @@ function cal($cal_month, $cal_year, $events) {
 			$weekday = 0;
 		}
 		
-		# В данный день есть новость
+		# Р’ РґР°РЅРЅС‹Р№ РґРµРЅСЊ РµСЃС‚СЊ РЅРѕРІРѕСЃС‚СЊ
 		if( isset( $events[$cal_day] ) ) {
 			$date['title'] = langdate( 'd F Y', $events[$cal_day], true );
 			
-			# Если суббота и воскресенье.
+			# Р•СЃР»Рё СЃСѓР±Р±РѕС‚Р° Рё РІРѕСЃРєСЂРµСЃРµРЅСЊРµ.
 			if( $weekday == '5' or $weekday == '6' ) {
 				
 				if( $config['allow_alt_url'] ) $buffer .= '<td '.(($cal_pos==$cur_date)?' class="day-active day-current" ':' class="day-active" ').'><a class="day-active" href="' . $config['http_home_url'] . '' . date( "Y/m/d", $events[$cal_day] ) . '/" title="' . $lang['cal_post'] . ' ' . $date['title'] . '">' . $cal_day . '</a></td>';
@@ -147,7 +147,7 @@ function cal($cal_month, $cal_year, $events) {
 			
 			} 
 
-			# Рабочии дни.
+			# Р Р°Р±РѕС‡РёРё РґРЅРё.
 			else {
 				
 				if( $config['allow_alt_url'] ) $buffer .= '<td '.(($cal_pos==$cur_date)?' class="day-active-v day-current" ':' class="day-active-v" ').'><a class="day-active-v" href="' . $config['http_home_url'] . '' . date( "Y/m/d", $events[$cal_day] ) . '/" title="' . $lang['cal_post'] . ' ' . $date['title'] . '">' . $cal_day . '</a></td>';
@@ -156,15 +156,15 @@ function cal($cal_month, $cal_year, $events) {
 			}
 		} 
 
-		# В данный день новостей нет.
+		# Р’ РґР°РЅРЅС‹Р№ РґРµРЅСЊ РЅРѕРІРѕСЃС‚РµР№ РЅРµС‚.
 		else {
 			
-			# Если суббота воскресенье
+			# Р•СЃР»Рё СЃСѓР±Р±РѕС‚Р° РІРѕСЃРєСЂРµСЃРµРЅСЊРµ
 			if( $weekday == "5" or $weekday == "6" ) {
 				$buffer .= '<td '.(($cal_pos==$cur_date)?' class="weekday day-current" ':' class="weekday" ').'>' . $cal_day . '</td>';
 			} 
 
-			# Дни, когда ничего нет
+			# Р”РЅРё, РєРѕРіРґР° РЅРёС‡РµРіРѕ РЅРµС‚
 			else {
 				$buffer .= '<td '.(($cal_pos==$cur_date)?' class="day day-current" ':' class="day" ').'>' . $cal_day . '</td>';
 			}

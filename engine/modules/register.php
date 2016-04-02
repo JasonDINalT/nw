@@ -7,11 +7,11 @@
 -----------------------------------------------------
  Copyright (c) 2004,2015 SoftNews Media Group
 =====================================================
- Äàííûé êîä çàùèùåí àâòîðñêèìè ïðàâàìè
+ Ð”Ð°Ð½Ð½Ñ‹Ð¹ ÐºÐ¾Ð´ Ð·Ð°Ñ‰Ð¸Ñ‰ÐµÐ½ Ð°Ð²Ñ‚Ð¾Ñ€ÑÐºÐ¸Ð¼Ð¸ Ð¿Ñ€Ð°Ð²Ð°Ð¼Ð¸
 =====================================================
- Ôàéë: register.php
+ Ð¤Ð°Ð¹Ð»: register.php
 -----------------------------------------------------
- Íàçíà÷åíèå: ðåãèñòðàöèÿ ïîñåòèòåëÿ
+ ÐÐ°Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: Ñ€ÐµÐ³Ð¸ÑÑ‚Ñ€Ð°Ñ†Ð¸Ñ Ð¿Ð¾ÑÐµÑ‚Ð¸Ñ‚ÐµÐ»Ñ
 =====================================================
 */
 
@@ -213,7 +213,7 @@ if( isset( $_POST['submit_reg'] ) AND !$stopregistration ) {
 	$name = $db->safesql( $parse->process( htmlspecialchars( trim( $_POST['name'] ), ENT_COMPAT, $config['charset'] ) ) );
 	$name = preg_replace('#\s+#i', ' ', $name);
 
-	$not_allow_symbol = array ("\x22", "\x60", "\t", '\n', '\r', "\n", "\r", '\\', ",", "/", "¬", "#", ";", ":", "~", "[", "]", "{", "}", ")", "(", "*", "^", "%", "$", "<", ">", "?", "!", '"', "'", " ", "&" );
+	$not_allow_symbol = array ("\x22", "\x60", "\t", '\n', '\r', "\n", "\r", '\\', ",", "/", "Â¬", "#", ";", ":", "~", "[", "]", "{", "}", ")", "(", "*", "^", "%", "$", "<", ">", "?", "!", '"', "'", " ", "&" );
 	$email = $db->safesql(trim( str_replace( $not_allow_symbol, '', strip_tags( stripslashes( $_POST['email'] ) ) ) ) );
 
 	$reg_error = check_reg( $name, $email, $password1, $password2, $sec_code, $sec_code_session );
@@ -590,7 +590,7 @@ if( isset( $_POST['submit_val'] ) AND !$stopregistration ) {
 		$xfieldsid = "";
 		include (ENGINE_DIR . '/inc/userfields.php');
 		$filecontents = array ();
-		$not_allow_symbol = array ("\x22", "\x60", "\t", '\n', '\r', "\n", "\r", '\\', ",", "/", "¬", "#", ";", ":", "~", "[", "]", "{", "}", ")", "(", "*", "^", "%", "$", "<", ">", "?", "!", '"', "'", " ", "&" );
+		$not_allow_symbol = array ("\x22", "\x60", "\t", '\n', '\r', "\n", "\r", '\\', ",", "/", "Â¬", "#", ";", ":", "~", "[", "]", "{", "}", ")", "(", "*", "^", "%", "$", "<", ">", "?", "!", '"', "'", " ", "&" );
 
 		if( ! empty( $postedxfields ) ) {
 			foreach ( $postedxfields as $xfielddataname => $xfielddatavalue ) {
@@ -626,7 +626,7 @@ if( $doaction == "validating" AND !$stopregistration AND !$_POST['submit_val'] )
 	$regpassword = md5( $user_arr[2] );
 	$name = trim( $db->safesql( htmlspecialchars( $parse->process( $user_arr[0] ), ENT_COMPAT, $config['charset'] ) ) );
 
-	$not_allow_symbol = array ("\x22", "\x60", "\t", '\n', '\r', "\n", "\r", '\\', ",", "/", "¬", "#", ";", ":", "~", "[", "]", "{", "}", ")", "(", "*", "^", "%", "$", "<", ">", "?", "!", '"', "'", " ", "&" );
+	$not_allow_symbol = array ("\x22", "\x60", "\t", '\n', '\r', "\n", "\r", '\\', ",", "/", "Â¬", "#", ";", ":", "~", "[", "]", "{", "}", ")", "(", "*", "^", "%", "$", "<", ">", "?", "!", '"', "'", " ", "&" );
 	$email = $db->safesql(trim( str_replace( $not_allow_symbol, '', strip_tags( stripslashes( $user_arr[1] ) ) ) ) );
 	$stronghash = sha1(DBHOST . DBNAME . SECURE_AUTH_KEY);
 

@@ -74,7 +74,7 @@ $config = <<<HTML
 ?>
 HTML;
 
-$con_file = fopen(ENGINE_DIR.'/data/config.php', "w") or die("Извините, но невозможно записать информацию в файл <b>.engine/data/config.php</b>.<br />Проверьте правильность проставленного CHMOD!");
+$con_file = fopen(ENGINE_DIR.'/data/config.php', "w") or die("РР·РІРёРЅРёС‚Рµ, РЅРѕ РЅРµРІРѕР·РјРѕР¶РЅРѕ Р·Р°РїРёСЃР°С‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ РІ С„Р°Р№Р» <b>.engine/data/config.php</b>.<br />РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РїСЂРѕСЃС‚Р°РІР»РµРЅРЅРѕРіРѕ CHMOD!");
 fwrite($con_file, $config);
 fclose($con_file);
 
@@ -94,5 +94,5 @@ $tableSchema[] = "UPDATE `" . PREFIX . "_users` SET password = MD5(password)";
            $db->query ($table);
            }
 
-msgbox("info","Информация", "<form action=\"index.php\" method=\"GET\">Обновление базы данных с версии <b>4.2</b> до версии <b>4.3</b> успешно завершено.<br />Нажмите далее для продолжения процессa обновления скрипта<br /><br /><input type=\"hidden\" name=\"next\" value=\"4.3\"><input class=\"btn btn-success\" type=\"submit\" value=\"Далее ...\"></form>");
+msgbox("info","РРЅС„РѕСЂРјР°С†РёСЏ", "<form action=\"index.php\" method=\"GET\">РћР±РЅРѕРІР»РµРЅРёРµ Р±Р°Р·С‹ РґР°РЅРЅС‹С… СЃ РІРµСЂСЃРёРё <b>4.2</b> РґРѕ РІРµСЂСЃРёРё <b>4.3</b> СѓСЃРїРµС€РЅРѕ Р·Р°РІРµСЂС€РµРЅРѕ.<br />РќР°Р¶РјРёС‚Рµ РґР°Р»РµРµ РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ РїСЂРѕС†РµСЃСЃa РѕР±РЅРѕРІР»РµРЅРёСЏ СЃРєСЂРёРїС‚Р°<br /><br /><input type=\"hidden\" name=\"next\" value=\"4.3\"><input class=\"btn btn-success\" type=\"submit\" value=\"Р”Р°Р»РµРµ ...\"></form>");
 ?>

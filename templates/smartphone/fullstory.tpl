@@ -13,13 +13,13 @@
 </article>
 [related-news]
 <div class="box">
-	<h3>Похожие новости</h3>
+	<h3>РџРѕС…РѕР¶РёРµ РЅРѕРІРѕСЃС‚Рё</h3>
 	<nav id="rel-news">
 		{related-news}
 	</nav>
 </div>
 [/related-news]
 <div class="box commentbox">
-	<h3>Комментарии ({comments-num})</h3>
+	<h3>РљРѕРјРјРµРЅС‚Р°СЂРёРё ({comments-num})</h3>
 	[comments]{comments}[/comments]
 </div>

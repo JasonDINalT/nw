@@ -1,81 +1,81 @@
 <article class="post static">
-  <h1 class="title">Статистика по сайту</h1>
+  <h1 class="title">РЎС‚Р°С‚РёСЃС‚РёРєР° РїРѕ СЃР°Р№С‚Сѓ</h1>
     <table class="tlist">
       <tr>
-        <td class="tl-left">Общий размер базы данных:</td>
+        <td class="tl-left">РћР±С‰РёР№ СЂР°Р·РјРµСЂ Р±Р°Р·С‹ РґР°РЅРЅС‹С…:</td>
         <td class="tl-right"><b>{datenbank}</b></td>
       </tr>
     </table>
-    <h4 class="subtitle">Новости:</h4>
+    <h4 class="subtitle">РќРѕРІРѕСЃС‚Рё:</h4>
     <table class="tlist">
       <tr>
-        <td class="tl-left">Общее количество новостей:</td>
+        <td class="tl-left">РћР±С‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РЅРѕРІРѕСЃС‚РµР№:</td>
         <td class="tl-right"><b>{news_num}</b></td>
       </tr>
       <tr>
-        <td class="tl-left">Из них опубликовано:</td>
+        <td class="tl-left">РР· РЅРёС… РѕРїСѓР±Р»РёРєРѕРІР°РЅРѕ:</td>
         <td class="tl-right"><b>{news_allow}</b></td>
       </tr>
       <tr>
-        <td class="tl-left">Опубликовано на главной:</td>
+        <td class="tl-left">РћРїСѓР±Р»РёРєРѕРІР°РЅРѕ РЅР° РіР»Р°РІРЅРѕР№:</td>
         <td class="tl-right"><b>{news_main}</b></td>
       </tr>
       <tr>
-        <td class="tl-left">Ожидает модерации:</td>
+        <td class="tl-left">РћР¶РёРґР°РµС‚ РјРѕРґРµСЂР°С†РёРё:</td>
         <td class="tl-right"><b>{news_moder}</b></td>
       </tr>
       <tr>
-        <td class="tl-left">Опубликовано за месяц:</td>
+        <td class="tl-left">РћРїСѓР±Р»РёРєРѕРІР°РЅРѕ Р·Р° РјРµСЃСЏС†:</td>
         <td class="tl-right"><b>{news_month}</b></td>
       </tr>
       <tr>
-        <td class="tl-left">Опубликовано за неделю:</td>
+        <td class="tl-left">РћРїСѓР±Р»РёРєРѕРІР°РЅРѕ Р·Р° РЅРµРґРµР»СЋ:</td>
         <td class="tl-right"><b>{news_week}</b></td>
       </tr>
       <tr>
-        <td class="tl-left">Опубликовано за сутки:</td>
+        <td class="tl-left">РћРїСѓР±Р»РёРєРѕРІР°РЅРѕ Р·Р° СЃСѓС‚РєРё:</td>
         <td class="tl-right"><b>{news_day}</b></td>
       </tr>
     </table>
-    <h4 class="subtitle">Комментарии:</h4>
+    <h4 class="subtitle">РљРѕРјРјРµРЅС‚Р°СЂРёРё:</h4>
     <table class="tlist">
       <tr>
-        <td class="tl-left">Всего комментариев: [ <a href="/?do=lastcomments">последние</a> ]</td>
+        <td class="tl-left">Р’СЃРµРіРѕ РєРѕРјРјРµРЅС‚Р°СЂРёРµРІ: [ <a href="/?do=lastcomments">РїРѕСЃР»РµРґРЅРёРµ</a> ]</td>
         <td class="tl-right"><b>{comm_num}</b></td>
       </tr>
       <tr>
-        <td class="tl-left">Добавлено за месяц:</td>
+        <td class="tl-left">Р”РѕР±Р°РІР»РµРЅРѕ Р·Р° РјРµСЃСЏС†:</td>
         <td class="tl-right"><b>{comm_month}</b></td>
       </tr>
       <tr>
-        <td class="tl-left">Добавлено за неделю:</td>
+        <td class="tl-left">Р”РѕР±Р°РІР»РµРЅРѕ Р·Р° РЅРµРґРµР»СЋ:</td>
         <td class="tl-right"><b>{comm_week}</b></td>
       </tr>
       <tr>
-        <td class="tl-left">Добавлено за сутки:</td>
+        <td class="tl-left">Р”РѕР±Р°РІР»РµРЅРѕ Р·Р° СЃСѓС‚РєРё:</td>
         <td class="tl-right"><b>{comm_day}</b></td>
       </tr>
     </table>
-    <h4 class="subtitle">Пользователи:</h4>
+    <h4 class="subtitle">РџРѕР»СЊР·РѕРІР°С‚РµР»Рё:</h4>
     <table class="tlist">
       <tr>
-        <td class="tl-left">Зарегистрировано пользователей:</td>
+        <td class="tl-left">Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№:</td>
         <td class="tl-right"><b>{user_num}</b></td>
       </tr>
       <tr>
-        <td class="tl-left">Из них забанено:</td>
+        <td class="tl-left">РР· РЅРёС… Р·Р°Р±Р°РЅРµРЅРѕ:</td>
         <td class="tl-right"><b>{user_banned}</b></td>
       </tr>
       <tr>
-        <td class="tl-left">Зарегистрировано за месяц:</td>
+        <td class="tl-left">Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅРѕ Р·Р° РјРµСЃСЏС†:</td>
         <td class="tl-right"><b>{user_month}</b></td>
       </tr>
       <tr>
-        <td class="tl-left">Зарегистрировано за неделю:</td>
+        <td class="tl-left">Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅРѕ Р·Р° РЅРµРґРµР»СЋ:</td>
         <td class="tl-right"><b>{user_week}</b></td>
       </tr>
       <tr>
-        <td class="tl-left">Добавлено за сутки:</td>
+        <td class="tl-left">Р”РѕР±Р°РІР»РµРЅРѕ Р·Р° СЃСѓС‚РєРё:</td>
         <td class="tl-right"><b>{user_day}</b></td>
       </tr>
     </table>

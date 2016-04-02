@@ -43,7 +43,7 @@ foreach($tableSchema as $table) {
 }
 
 
-$handler = fopen(ENGINE_DIR.'/data/config.php', "w") or die("Извините, но невозможно записать информацию в файл <b>.engine/data/config.php</b>.<br />Проверьте правильность проставленного CHMOD!");
+$handler = fopen(ENGINE_DIR.'/data/config.php', "w") or die("РР·РІРёРЅРёС‚Рµ, РЅРѕ РЅРµРІРѕР·РјРѕР¶РЅРѕ Р·Р°РїРёСЃР°С‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ РІ С„Р°Р№Р» <b>.engine/data/config.php</b>.<br />РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РїСЂРѕСЃС‚Р°РІР»РµРЅРЅРѕРіРѕ CHMOD!");
 fwrite($handler, "<?PHP \n\n//System Configurations\n\n\$config = array (\n\n");
 foreach($config as $name => $value)
 {
@@ -57,7 +57,7 @@ require_once(ENGINE_DIR.'/data/videoconfig.php');
 $video_config['tube_related'] = "1";
 $video_config['tube_dle'] = "0";
 
-$con_file = fopen(ENGINE_DIR.'/data/videoconfig.php', "w+") or die("Извините, но невозможно создать файл <b>.engine/data/videoconfig.php</b>.<br />Проверьте правильность проставленного CHMOD!");
+$con_file = fopen(ENGINE_DIR.'/data/videoconfig.php', "w+") or die("РР·РІРёРЅРёС‚Рµ, РЅРѕ РЅРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р» <b>.engine/data/videoconfig.php</b>.<br />РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РїСЂРѕСЃС‚Р°РІР»РµРЅРЅРѕРіРѕ CHMOD!");
 fwrite( $con_file, "<?PHP \n\n//Videoplayers Configurations\n\n\$video_config = array (\n\n" );
 foreach ( $video_config as $name => $value ) {
 		
@@ -79,7 +79,7 @@ while ( $file = readdir( $fdir ) ) {
 
 clear_cache();
 
-if ($db->error_count) $error_info = "Всего запланировано запросов: <b>".$db->query_num."</b> Неудалось выполнить запросов: <b>".$db->error_count."</b>. Возможно они уже выполнены ранее."; else $error_info = "";
+if ($db->error_count) $error_info = "Р’СЃРµРіРѕ Р·Р°РїР»Р°РЅРёСЂРѕРІР°РЅРѕ Р·Р°РїСЂРѕСЃРѕРІ: <b>".$db->query_num."</b> РќРµСѓРґР°Р»РѕСЃСЊ РІС‹РїРѕР»РЅРёС‚СЊ Р·Р°РїСЂРѕСЃРѕРІ: <b>".$db->error_count."</b>. Р’РѕР·РјРѕР¶РЅРѕ РѕРЅРё СѓР¶Рµ РІС‹РїРѕР»РЅРµРЅС‹ СЂР°РЅРµРµ."; else $error_info = "";
 
-msgbox("info","Информация", "Обновление базы данных с версии <b>8.5</b> до версии <b>9.0</b> успешно завершено.<br />{$error_info}<br />Нажмите далее для продолжения процессa обновления скрипта.");
+msgbox("info","РРЅС„РѕСЂРјР°С†РёСЏ", "РћР±РЅРѕРІР»РµРЅРёРµ Р±Р°Р·С‹ РґР°РЅРЅС‹С… СЃ РІРµСЂСЃРёРё <b>8.5</b> РґРѕ РІРµСЂСЃРёРё <b>9.0</b> СѓСЃРїРµС€РЅРѕ Р·Р°РІРµСЂС€РµРЅРѕ.<br />{$error_info}<br />РќР°Р¶РјРёС‚Рµ РґР°Р»РµРµ РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ РїСЂРѕС†РµСЃСЃa РѕР±РЅРѕРІР»РµРЅРёСЏ СЃРєСЂРёРїС‚Р°.");
 ?>
