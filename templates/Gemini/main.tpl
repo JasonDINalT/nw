@@ -36,7 +36,7 @@
 						<li><a href="#">О сайте</a></li>
 						<li><a href="#">В мире</a></li>
 						<li><a href="#">Экономика</a></li>
-						<li><a href="#">Религия</a></li>
+						<li><a href="/index.php?newsid=1">Религия</a></li>
 						<li><a href="#">Криминал</a></li>
 						<li><a href="#">Спорт</a></li>
 						<li><a href="#">Культура</a></li>
