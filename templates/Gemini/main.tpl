@@ -56,7 +56,7 @@
 
 				<div class="vsep">
 					<div id="midside" class="lcol">
-<!--						[aviable=showfull]{speedbar}[/aviable]-->
+
 						<div align="center" class="hbanner">
 						</div>
 						[not-aviable=showfull][sort]<div class="sortn lines">{sort}</div>[/sort][/not-aviable]
