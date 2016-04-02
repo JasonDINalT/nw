@@ -75,7 +75,7 @@ $(document).ready(function() {
 <div id="footbox"><div class="wrap">
     <div id="fbox">
 		<div id="fbl1" class="lcol"><h3>Îןנמסû</h3>{vote}</div>
-		<div id="fbl2" class="lcol"><h3>בחהûשü</h3>{calendar}</div>
+		<div id="fbl2" class="lcol" style="color:white"><h3>לזגÿך</h3>{calendar}</div>
 		<div id="fbl3" class="lcol"><h3>Îבכאךמ עודמג</h3>{tags}</div>
 		<div class="clr"></div>
     </div>
