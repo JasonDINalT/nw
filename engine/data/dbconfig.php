@@ -6,7 +6,7 @@ define ("DBNAME", "dle");
 
 define ("DBUSER", "root");
 
-define ("DBPASS", "");
+define ("DBPASS", "10400064");
 
 define ("PREFIX", "dle");
 
