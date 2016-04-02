@@ -8,7 +8,7 @@ $config = array (
 
 'home_title' => "DataLife Engine",
 
-'http_home_url' => "http://nw/",
+'http_home_url' => "http://127.0.0.1/nw/",
 
 'charset' => "utf-8",
 
