@@ -3,9 +3,9 @@
 =====================================================
  DataLife Engine - by SoftNews Media Group 
 -----------------------------------------------------
- email: nick-on@mail.ru  icq: 333396679
+ http://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2011 
+ Copyright (c) 2004,2015 
 =====================================================
  ƒанный код защищен авторскими правами
 =====================================================
@@ -28,23 +28,23 @@ $data = array ();
 
 if( isset( $_REQUEST['vote_action'] ) ) $vote_action = $_REQUEST['vote_action']; else $vote_action = "";
 if( isset( $_REQUEST['vote_id'] ) ) $vote_id = intval( $_REQUEST['vote_id'] ); else $vote_id = 0;
-if( isset( $_REQUEST['vote_check'] ) ) $vote_check = $db->safesql( $_REQUEST['vote_check'] ); else $vote_check = 0;
+if( isset( $_REQUEST['vote_check'] ) ) $vote_check = intval( $_REQUEST['vote_check'] ); else $vote_check = 0;
 
 $vote_info = get_vars( "vote" );
 
 if( ! is_array( $vote_info ) ) {
 	$vote_info = array ();
 	
-	$db->query( "SELECT id, title, category, body, vote_num, start, end FROM " . PREFIX . "_vote WHERE approve" );
+	$db->query( "SELECT id, title, category, body, vote_num, start, end, grouplevel FROM " . PREFIX . "_vote WHERE approve" );
 	
 	while ( $row = $db->get_row() ) {
-		$vote_info[$row['id']] = array ('id' => $row['id'], 'title' => $row['title'], 'category' => $row['category'], 'body' => $row['body'], 'vote_num' => $row['vote_num'], 'start' => $row['start'], 'end' => $row['end'] );
+		$vote_info[$row['id']] = array ('id' => $row['id'], 'title' => $row['title'], 'category' => $row['category'], 'body' => $row['body'], 'vote_num' => $row['vote_num'], 'start' => $row['start'], 'end' => $row['end'], 'grouplevel' => $row['grouplevel'] );
 	}
 	set_vars( "vote", $vote_info );
 	$db->free();
 }
 
-if( !$vote_id or $vote_info[$vote_id]['id'] == "" ) {
+if( !$vote_id OR $vote_info[$vote_id]['id'] == "" ) {
 
 	$find_vote = array ();
 	$find_cats = array ();
@@ -53,6 +53,13 @@ if( !$vote_id or $vote_info[$vote_id]['id'] == "" ) {
 		
 		if ($votes['start'] AND $_TIME < $votes['start'] ) continue;
 		if ($votes['end'] AND $_TIME > $votes['end'] ) continue;
+
+		$votes['grouplevel'] = explode( ',', $votes['grouplevel'] );
+			
+		if( $votes['grouplevel'][0] != "all" AND !in_array( $member_id['user_group'], $votes['grouplevel'] ) ) {
+			continue;
+		}
+			
 
 		$v_cats = explode( ',', $votes['category'] );
 		
@@ -71,16 +78,11 @@ if( !$vote_id or $vote_info[$vote_id]['id'] == "" ) {
 } else
 	$rid = $vote_id;
 
-$title = stripslashes( $vote_info[$rid]['title'] );
-$body = stripslashes( $vote_info[$rid]['body'] );
-$body = explode( "<br />", $body );
-$max = $vote_info[$rid]['vote_num'];
-
 if( $vote_action == "vote" ) {
 	/////////////////////////////////////////////////////////////////////////////
 	//  ѕровер€ем проголосовал ли текущий пользователь
 	/////////////////////////////////////////////////////////////////////////////
-	$_IP = $db->safesql( $_SERVER['REMOTE_ADDR'] );
+	$_IP = get_ip();
 	
 	if( isset( $member_id['name'] ) ) $nick = $db->safesql($member_id['name']);
 	else $nick = '';
@@ -106,11 +108,8 @@ if( $vote_action == "vote" ) {
 		
 		$db->query( "INSERT INTO " . PREFIX . "_vote_result (ip, name, vote_id, answer) VALUES ('$_IP', '$nick', '$rid', '$vote_check')" );
 		
-		$db->query( "UPDATE " . PREFIX . "_vote set vote_num=vote_num+1 where id='$rid'" );
-		
-		@unlink( ENGINE_DIR . '/cache/system/vote.php' );
-		
-		$max ++;
+		$db->query( "UPDATE " . PREFIX . "_vote SET vote_num=vote_num+1 WHERE id='$rid'" );
+
 	}
 }
 
@@ -132,7 +131,7 @@ if( $vote_action == "results" OR $flag ) {
 if (!$user_group[$member_id['user_group']]['allow_vote']) $not_allow_vote = "if (event == 'vote') { DLEalert('{$lang['vote_not_allow']}', dle_info); return false;}"; else $not_allow_vote = "";
 
 $ajax_script = <<<HTML
-<script language="javascript" type="text/javascript">
+<script type="text/javascript">
 <!--
 function doVote( event ){
 
@@ -158,14 +157,16 @@ HTML;
 
 switch ($flag) {
 	case 0 :
+
+		$title = stripslashes( $vote_info[$rid]['title'] );
+		$body = stripslashes( $vote_info[$rid]['body'] );
+		$body = explode( "<br />", $body );
+
 		for($i = 0; $i < sizeof( $body ); $i ++) {
-			if( $i == 0 ) {
-				$sel = "checked=\"checked\"";
-			} else {
-				$sel = "";
-			}
-			;
-			$entry .= "<div class=\"vote\"><input name=\"vote_check\" type=\"radio\" $sel value=\"$i\" /> $body[$i]</div>";
+
+			if( $i == 0 ) $sel = "checked=\"checked\""; else $sel = "";
+
+			$entry .= "<div class=\"vote\"><input id=\"vote_check{$i}\" name=\"vote_check\" type=\"radio\" $sel value=\"$i\" /><label for=\"vote_check{$i}\"> $body[$i]</label></div>";
 		}
 		
 		$entry = "<div id=\"dle-vote\">$entry</div>";
@@ -185,6 +186,12 @@ switch ($flag) {
 		break;
 	
 	case 1 :
+
+		$result = $db->super_query( "SELECT * FROM " . PREFIX . "_vote WHERE id='$rid'" );
+		$title = stripslashes( $result['title'] );
+		$body = stripslashes( $result['body'] );
+		$body = explode( "<br />", $body );
+		$max = $result['vote_num'];
 		
 		for($i = 0; $i < sizeof( $body ); $i ++) {
 			
@@ -197,7 +204,7 @@ switch ($flag) {
 			else $proc = 0;
 			$proc = round( $proc, 2 );
 			
-			$entry .= "<div class=\"vote\" align=\"left\"><p>$body[$i] - $num</p><div class=\"voteline\"><span class=\"thide\" style=\"width:$proc%;\">$proc%</span></div></div>\n";
+			$entry .= "<div class=\"vote\">$body[$i] - $num ($proc%)</div><div class=\"voteprogress\"><span class=\"vote{$pn}\" style=\"width:".intval($proc)."%;\">{$proc}%</span></div>\n";
 		}
 		$entry = "<div id=\"dle-vote\">$entry</div>";
 		
@@ -216,6 +223,6 @@ switch ($flag) {
 
 }
 
-if( ! $rid ) $tpl->result['vote'] = "";
+if( !$rid ) $tpl->result['vote'] = "";
 
 ?>
