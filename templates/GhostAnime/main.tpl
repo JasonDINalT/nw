@@ -75,7 +75,7 @@ $(document).ready(function() {
 <div id="footbox"><div class="wrap">
     <div id="fbox">
 		<div id="fbl1" class="lcol"><h3>Опросы</h3>{vote}</div>
-		<div id="fbl2" class="lcol"><h3>Календарь</h3>{calendar}</div>
+		<div id="fbl2" class="lcol"><h3>бздыщь</h3>{calendar}</div>
 		<div id="fbl3" class="lcol"><h3>Облако тегов</h3>{tags}</div>
 		<div class="clr"></div>
     </div>
