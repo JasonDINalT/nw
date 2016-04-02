@@ -56,16 +56,9 @@
 				{include file="slider.tpl"}
 				<div class="vsep">
 					<div id="midside" class="lcol">
-						[aviable=showfull]{speedbar}[/aviable]
-						<div align="center" class="hbanner">
-							{banner_header}
-						</div>
-						[not-aviable=showfull][sort]<div class="sortn lines">{sort}</div>[/sort][/not-aviable]
-						{info}
 						{content}
 					</div>
 					<div id="sidebar" class="rcol">
-						{include file="sidebar.tpl"}
 					</div>
 					<div class="clr"></div>
 				</div>
