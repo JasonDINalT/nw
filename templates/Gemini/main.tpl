@@ -56,24 +56,11 @@
 
 				<div class="vsep">
 					<div id="midside" class="lcol">
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 						{content}
 					</div>
-					<div id="sidebar" class="rcol">
-					</div>
-=======
-<!--						[aviable=showfull]{speedbar}[/aviable]-->
->>>>>>> da09b30d69b4f75767b12ba4adc73b43062c45ac
-						<div align="center" class="hbanner">
-						</div>
-						[not-aviable=showfull][sort]<div class="sortn lines">{sort}</div>[/sort][/not-aviable]
-						{info}
-						{content}
-					</div>
->>>>>>> 5b3b4a5fce953f97fb95f54d9d892f49df6ad809
+
+
 					<div class="clr"></div>
 				</div>
 			</div>
