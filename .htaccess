@@ -1,4 +1,4 @@
-DirectoryIndex index.php
+DirectoryIndex index.php?do=static&page=start
 
 RewriteEngine On
 
